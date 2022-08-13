@@ -1,12 +1,312 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/normolise.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <title>Радио W-Wave</title>
 </head>
 <body>
-    edd
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-2 col-sm-12 col-md-10 col-lg-12 header__container">
+                    <div class="header__logo">
+                        <a class="header__logo__link" href="#">
+                            <img class="header__logo__img" src="img/logotype.png" alt="">
+                        </a>
+                    </div>
+                <nav class="header__nav">
+                   <ul class="header__nav__list-desctop header__nav__list-mobile">
+                    <li class="header__nav__item">
+                        <a class="header__nav__link" href="#">Подкасты</a>
+                    </li>
+                    <li class="header__nav__item">
+                        <a class="header__nav__link" href="#">Передачи</a>
+                    </li>
+                    <li class="header__nav__item">
+                        <a class="header__nav__link" href="#">Гости</a>
+                    </li>
+                    <li class="header__nav__item">
+                        <a class="header__nav__link" href="#">Плейлисты</a>
+                    </li>
+                    <li class="header__nav__item">
+                        <a class="header__nav__link" href="#">О нас</a>
+                    </li>
+                   </ul>
+                </nav>
+                <div class="header__search">
+                    <a class="header__search-link" href="#">
+                    </a>
+                    <button class="header__nav__button" aria-label="Кнопка меню">Вход</button>
+                </div>
+
+                    <div class="header__modal">
+                        <div class="header__modal-top">
+                            <h2 class="header__modal-head">Вход</h2>
+                            <p header__modal-description>Если у вас еще нет аккаунта,<a href="#">зарегистрируйтесь</a></p>
+                            <input type="text" placeholder="Логин">
+                            <input type="text" placeholder="Пароль">
+                            <button class="header__modal-btn">Войти</button>
+                        </div>
+                        <div class="header__modal-bottom">
+                            <span class="header__modal-text">Войти с помощью:</span>
+                            <div class="header__social">
+                                <a class="header__social-link" href=""></a>
+                                <a class="header__social-link" href=""></a>
+                                <a class="header__social-link" href=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="bar">
+            <div class="container">
+                <div class="row">
+                    <div class="bar__hero col-3 col-sm-12 col-md-2 col-lg-12">
+                        <nav class="bar__nav">
+                            <ul class="bar__list">
+                                <li class="bar__type">
+                                    <a class="bar__link" href="#">Новости</a>
+                                </li>
+                                <li class="bar__type">
+                                    <a class="bar__link" href="#">Блоги</a>
+                                </li>
+                                <li class="bar__type">
+                                    <a class="bar__link" href="#">Топы</a>
+                                </li>
+                                <li class="bar__type">
+                                    <a class="bar__link" href="#">Опросы</a>
+                                </li>
+                                <li class="bar__type">
+                                    <a class="bar__link" href="#">Рейтинги</a>
+                                </li>
+                                <li class="bar__type">
+                                    <a class="bar__link" href="#">Реклама</a>
+                                </li>
+                            </ul>
+                            <div class="bar__icon">
+                                <div class="bar__icon-item">
+                                    <button class="bar__icon-link"></button>
+                                    <div class="bar__icon-group">
+                                        <span class="bar__icon-text">Ранее в эфире</span>
+                                        <span class="bar__icon-music">«Музыка»</span>
+                                    </div>
+                                </div>
+                                <div class="bar__icon-item">
+                                    <button href="#" class="bar__icon-link"></button>
+                                    <div class="bar__icon-group">
+                                        <span class="bar__icon-text">Сейчас в эфире</span>
+                                        <span class="bar__icon-music">«Как так?»</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="bar__logo"></span>
+                        </nav>
+                       
+                    </div>
+                   
+                </div>
+            </div>
+        </section>
+        <section class="hero">
+           <div class="container">
+            <div class="row">
+                <div class="col-3 col-sm-12 col-md-2 col-lg-12">
+                    <aside class="hero__info">
+                        <h1 class="hero__heading">Радио <span class="hero__heading-italic">W-Wawe</span></h1>
+                        <p class="hero__description">
+                            Привет, на связи W-Wawe! 
+                            Раньше мы были <a href="#">изданием</a>, а теперь пробуем себя в разоворном жанре. 
+                            Говорим о музыке, политике, истории, науке и культуре. 
+                            Здесь, помимо прямого эфира — архив передач и многое другое :) 
+                        </p>
+                        <a class="hero__link" href="#">Слушать эфир</a>
+                    </aside>
+                </div>
+               
+            </div>
+           </div>
+        </section>
+        <section class="podcasts">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3 col-sm-12 col-md-2 col-lg-12">
+                        <h2 class="podcasts__heading">Подкасты</h2>
+                       <ul class="podcasts__list">
+                        <li class="podcasts__item">
+                            <span class="podcasts__date">14 июня</span>
+                            <img src="/img/podkast1.png" alt="Картинка исполнителя">
+                            <div class="podcasts__card">
+                                <div  class="podcasts__item-group">
+                                    <div class="podcasts__info-group">
+                                        <span class="podcasts__time">15:43</span>
+                                        <h3 class="podcasts__name">Европа. XIX век</h3>
+                                        <p class="podcasts__singer">Дмитрий Гутенберг</p>
+                                    </div>
+                                    <button class="podcasts__button"></button>
+                                </div>
+                                <div class="podcasts__description">
+                                    <span class="podcasts__description-play">258</span>
+                                    <span class="podcasts__description-hurt">104</span>
+                                    <span class="podcasts__description-share">68</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="podcasts__item">
+                            <span class="podcasts__date">14 июня</span>
+                            <img src="/img/podkast1.png" alt="Картинка исполнителя">
+                            <div class="podcasts__card">
+                                <div  class="podcasts__item-group">
+                                    <div class="podcasts__info-group">
+                                        <span class="podcasts__time">15:43</span>
+                                        <h3 class="podcasts__name">Европа. XIX век</h3>
+                                        <p class="podcasts__singer">Дмитрий Гутенберг</p>
+                                    </div>
+                                    <button class="podcasts__button"></button>
+                                </div>
+                                <div class="podcasts__description">
+                                    <span class="podcasts__description-play">258</span>
+                                    <span class="podcasts__description-hurt">104</span>
+                                    <span class="podcasts__description-share">68</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="podcasts__item">
+                            <span class="podcasts__date">14 июня</span>
+                            <img src="/img/podkast1.png" alt="Картинка исполнителя">
+                            <div class="podcasts__card">
+                                <div  class="podcasts__item-group">
+                                    <div class="podcasts__info-group">
+                                        <span class="podcasts__time">15:43</span>
+                                        <h3 class="podcasts__name">Европа. XIX век</h3>
+                                        <p class="podcasts__singer">Дмитрий Гутенберг</p>
+                                    </div>
+                                    <button class="podcasts__button"></button>
+                                </div>
+                                <div class="podcasts__description">
+                                    <span class="podcasts__description-play">258</span>
+                                    <span class="podcasts__description-hurt">104</span>
+                                    <span class="podcasts__description-share">68</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="podcasts__item">
+                            <span class="podcasts__date">14 июня</span>
+                            <img src="/img/podkast1.png" alt="Картинка исполнителя">
+                            <div class="podcasts__card">
+                                <div  class="podcasts__item-group">
+                                    <div class="podcasts__info-group">
+                                        <span class="podcasts__time">15:43</span>
+                                        <h3 class="podcasts__name">Европа. XIX век</h3>
+                                        <p class="podcasts__singer">Дмитрий Гутенберг</p>
+                                    </div>
+                                    <button class="podcasts__button"></button>
+                                </div>
+                                <div class="podcasts__description">
+                                    <span class="podcasts__description-play">258</span>
+                                    <span class="podcasts__description-hurt">104</span>
+                                    <span class="podcasts__description-share">68</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="podcasts__item">
+                            <span class="podcasts__date">14 июня</span>
+                            <img src="/img/podkast1.png" alt="Картинка исполнителя">
+                            <div class="podcasts__card">
+                                <div  class="podcasts__item-group">
+                                    <div class="podcasts__info-group">
+                                        <span class="podcasts__time">15:43</span>
+                                        <h3 class="podcasts__name">Европа. XIX век</h3>
+                                        <p class="podcasts__singer">Дмитрий Гутенберг</p>
+                                    </div>
+                                    <button class="podcasts__button"></button>
+                                </div>
+                                <div class="podcasts__description">
+                                    <span class="podcasts__description-play">258</span>
+                                    <span class="podcasts__description-hurt">104</span>
+                                    <span class="podcasts__description-share">68</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="podcasts__item">
+                            <span class="podcasts__date">14 июня</span>
+                            <img src="/img/podkast1.png" alt="Картинка исполнителя">
+                            <div class="podcasts__card">
+                                <div  class="podcasts__item-group">
+                                    <div class="podcasts__info-group">
+                                        <span class="podcasts__time">15:43</span>
+                                        <h3 class="podcasts__name">Европа. XIX век</h3>
+                                        <p class="podcasts__singer">Дмитрий Гутенберг</p>
+                                    </div>
+                                    <button class="podcasts__button"></button>
+                                </div>
+                                <div class="podcasts__description">
+                                    <span class="podcasts__description-play">258</span>
+                                    <span class="podcasts__description-hurt">104</span>
+                                    <span class="podcasts__description-share">68</span>
+                                </div>
+                            </div>
+                        </li>
+                       </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="programs">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3 col-sm-12 col-md-2 col-lg-2">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="guests">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3 col-sm-12 col-md-2 col-lg-2">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="playlist">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3 col-sm-12 col-md-2 col-lg-2">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="shop">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3 col-sm-12 col-md-2 col-lg-2">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3 col-sm-12 col-md-2 col-lg-2">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-3 col-sm-12 col-md-2 col-lg-2">
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
