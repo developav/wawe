@@ -1,0 +1,118 @@
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.select-wrapper {
+    position: relative;
+    user-select: none;
+    width: 97%;
+}
+.select {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.select__trigger {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7px 0px 12px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #121723;
+    height: 40px;
+    line-height: 16px;
+    background: #E6E8EC;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+}
+.custom-options {
+    position: absolute;
+    display: block;
+    top: 100%;
+    left: 0;
+    right: 0;
+    border: 1px solid #D2D5DD;
+    border-radius: 10px;
+    border-top: 0;
+    background: #fff;
+    transition: all 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 2;
+}
+.select.open .custom-options {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+}
+.custom-option {
+    position: relative;
+    display: block;
+    padding: 12px 12px 12px 12px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #A1A6B4;
+    line-height: 16px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.custom-option:nth-child(1){
+    border-bottom: 1px solid #D2D5DD;
+}
+.custom-option:nth-child(2){
+    border-bottom: 1px solid #D2D5DD;
+}
+.custom-option:nth-child(3){
+    border-bottom: 1px solid #D2D5DD;
+}
+.custom-option:hover {
+    cursor: pointer;
+    background-color: #b2b2b2;
+}
+.custom-option.selected {
+    color: #A1A6B4;
+    background-color: #ffffff;
+}
+.arrow {
+    position: relative;
+    height: 10px;
+    width: 18px;
+}
+.arrow::before, .arrow::after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    width: 0.10rem;
+    height: 100%;
+    transition: all 0.5s;
+}
+.arrow::before {
+    left: -2px;
+    transform: rotate(-45deg);
+    background-color: #394a6d;
+}
+.arrow::after {
+    left: 5px;
+    transform: rotate(45deg);
+    background-color: #394a6d;
+}
+.open .arrow::before {
+    left: -2px;
+    transform: rotate(45deg);
+}
+.open .arrow::after {
+    left: 5px;
+    transform: rotate(-45deg);
+}
