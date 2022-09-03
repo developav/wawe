@@ -1,0 +1,90 @@
+.header__nav__link:hover{
+    cursor: pointer;
+    color: #6D31EE;
+}
+.header__nav__link:focus{
+    cursor: pointer;
+    background-color: #AA9DFA;
+    color: #ffffff;
+}
+.header__nav__link:active{
+    cursor: pointer;
+    color: #4F28A5;
+    background-color: transparent;
+    border: 1px solid #4F28A5;
+}
+
+.header__search-icon:hover{
+    stroke: #AA9DFA;
+}
+.header__search-icon:focus{
+    stroke: #4F28A5;
+}
+.header__search-icon:active{
+    stroke: #6D31EE;
+}
+
+.header__nav__button:hover{
+    background-color: #121723;
+    color: #FFFFFF;
+}
+.header__nav__button:focus{
+    background-color: #AA9DFA;
+    color: #121723;
+}
+.header__nav__button:active{
+    background-color: #4F28A5;
+    color: #FFFFFF;
+}
+
+.bar__link:hover{
+    cursor: pointer;
+    color: #6D31EE;
+}
+.bar__link:focus{
+    cursor: pointer;
+    background-color: #AA9DFA;
+    color: #ffffff;
+}
+.bar__link:active{
+    cursor: pointer;
+    color: #4F28A5;
+    background-color: transparent;
+    border: 1px solid #4F28A5;
+}
+.bar__icon-svg:hover{
+    cursor: pointer;
+    stroke: #6D31EE;
+    fill: #FFFFFF;
+}
+.bar__icon-svg:focus{
+    cursor: pointer;
+    fill: #AA9DFA;
+}
+.bar__icon-svg:active{
+    cursor: pointer;
+    fill: #4F28A5;
+}
+.hero__link:hover{
+    cursor: pointer;
+    background-color: #AA9DFA;
+    color: #FFFFFF;
+    border-color: transparent;
+}
+.hero__link:focus{
+    cursor: pointer;
+    background-color: #AA9DFA;
+    color: #FFFFFF;
+    border-color: #4F28A5;
+}
+.hero__link:active{
+    cursor: pointer;
+    color: #FFFFFF;
+    background-color: #4F28A5;
+    border-color: #4F28A5;
+}
+.podcasts__icon:hover{
+    cursor: pointer;
+    stroke: #6D31EE;
+    fill: #FFFFFF;
+}

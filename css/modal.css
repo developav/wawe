@@ -1,0 +1,133 @@
+.disable-scroll{
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+.header__pop-modal{
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    background-color: rgba(0,0,0,.7);
+    cursor: pointer;
+    overflow-y: auto;
+    overflow-x: hidden;
+    vertical-align: top;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--transition-time),visibility var(--transition-time);
+}
+.header__pop-modal::before {
+    content: "";
+    vertical-align: middle;
+    height: 100%;
+}
+.header__nav__link {
+     text-decoration: none;
+     font-size: 20px;
+     color: black;
+ }
+.header__popup{
+    position: relative;
+    padding: 59px 59px 0px;
+    width: 36.7%;
+    height: 598px;
+    top: 79px;
+    left: 28.6%;
+    z-index: 1000;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background: #121723;
+    border-radius: 0px;
+    border: none;
+    z-index: 100;
+}
+.header__close{
+    position: absolute;
+    content: '';
+    top: 29px;
+    right: 31px;
+}
+.header__modal-head{
+    margin-bottom: 18px;
+    font-size: 48px;
+    line-height: 48px;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+.header__modal-description{
+    margin-bottom: 29px;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+.header__modal-reg{
+    color: #6D31EE;
+}
+.header__form{
+    margin-bottom: 31px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 29px;
+    border-bottom: 1px solid rgba(230, 232, 236, 0.4);
+}
+.header__input-form{
+    margin-bottom: 30px;
+    margin-right: 27px;
+    padding: 1px 1px 1px 29px;
+    width: 70%;
+    height: 66px;
+    border: 1px solid #FFFFFF;
+    border-radius: 40px;
+    background-color: transparent;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #A1A6B4;
+}
+.header__submit{
+    width: 23.7%;
+    height: 70px;
+    border-radius: 36px;
+    background-color: #6D31EE;
+    border: none;
+    color: #FFFFFF;
+    font-size: 20px;
+}
+.show_popup{
+    display: block;
+}
+.fade.animate-open {
+    opacity: 1;
+}
+.fade, .fade.animate-open {
+    transition: opacity 0.3s;
+}
+.is-open {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s,visibility 1s;
+}
+.header__modal-bottom{
+    width: 203px;
+    height: 91px;
+}
+.header__modal-text{
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+.header__social {
+    padding: 32px 6px 7px 3px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
