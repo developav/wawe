@@ -23,17 +23,14 @@ const swiper = new Swiper('.swiper', {
       el: '.swiper-scrollbar',
     },
     breakpoints: {
-      // when window width is >= 320px
       320: {
         slidesPerView: 2,
-        spaceBetween: 10
+        spaceBetween: 5
       },
-      // when window width is >= 480px
       850: {
         slidesPerView: 2,
         spaceBetween: 25
       },
-      // when window width is >= 640px
       1200: {
         slidesPerView: 4,
         spaceBetween: 30
@@ -115,6 +112,7 @@ let headButton = document.getElementById('button')
 headButton.addEventListener('click', function(){
   headButton.classList.toggle('nav__btn_active');
   document.querySelector('.header__nav').classList.toggle('header__nav-active');
+  document.querySelector('.bar__nav').classList.toggle('bar__nav-active');
 })
 
 let etherButton = document.querySelector('.ether__btn');
@@ -129,4 +127,11 @@ etherButton.addEventListener('click', function(){
   closeButton.classList.toggle('open');
 });
 
+let butttonPodcast = document.querySelector('.podcasts__btn-else');
+let listItem = document.querySelector('.podcasts__item');
 
+butttonPodcast.addEventListener('click',function(){
+  document.querySelectorAll('.podcasts__item').forEach(function(workСontainer){
+    workСontainer.classList.toggle('podcasts__item_active')
+});
+})

@@ -368,6 +368,10 @@
     }
 
     /* About */
+    .about {
+        position: relative;
+        height: 1339px;
+    }
 
     .about::after {
         position: absolute;
@@ -387,14 +391,14 @@
         width: 66%;
     }
     .swiper-button-next, .swiper-rtl .swiper-button-prev {
-        right: 36px;
+        right: -50px;
         left: auto;
     }
     .swiper-button-prev, .swiper-button-next {
-        top: 45%;
+        top: 49%;
     }
     .swiper-button-prev, .swiper-rtl .swiper-button-next {
-        left: 36px;
+        left: -50px;
         right: auto;
     }
     .swiper {
@@ -412,9 +416,7 @@
     .about__form-submit {
         margin-bottom: 30px;
     }
-    .about {
-        height: 1339px;
-    }
+    
     /* footer */
     .footer__list-group {
         width: 55%;
@@ -422,6 +424,27 @@
         columns: 3;
         column-width: 76px;
         column-gap: 107px;
+    }
+}
+@media(max-width:920px){
+    .container {
+        max-width: 820px;
+    }
+    .swiper-wrapper {
+        width: 90%;
+        height: 100%;
+        z-index: 1;
+        display: flex;
+        transition-property: transform;
+        box-sizing: content-box;
+    }
+    .swiper-button-prev, .swiper-rtl .swiper-button-next {
+        left: -5px;
+        right: auto;
+    }
+    .swiper-button-next, .swiper-rtl .swiper-button-prev {
+        right: 31px;
+        left: auto;
     }
 }
 @media(max-width:850px){
@@ -438,7 +461,7 @@
         width: 149%;
         padding-top: 104px;
         height: 100vh;
-        background-color:#A1A6B4 ;
+        background-color: #D2D5DD ;
         background-repeat: no-repeat;
         background-position: 295px 85px;
     }
@@ -451,6 +474,27 @@
     .header__nav-active {
         z-index: 3;
         display: block;
+    }
+    .header__nav-active::before {
+        position: absolute;
+        top: 109px;
+        right: 244px;
+        content: '';
+        background-image: url('../img/spiralheader.png');
+        background-repeat: no-repeat;
+        width: 15%;
+        height: 324px;
+    }
+    
+    .header__nav-active::after {
+        position: absolute;
+        top: 0px;
+        right: 101px;
+        content: '';
+        background-image: url('../img/spiralheader2.png');
+        background-repeat: no-repeat;
+        width: 14%;
+        height: 324px;
     }
     .header__content {
         position: relative;
@@ -670,7 +714,7 @@
         left: 113px;
         width: 65px;
         height: 89px;
-        background-image: url(/img/mic.png);
+        background-image: url('../img/mic.png');
         background-position: left;
         background-repeat: no-repeat;
         position: absolute;
@@ -804,7 +848,7 @@
         top: 160px;
         width: 100%;
         height: 12px;
-        background-image: url(/img/shop-vector.png);
+        background-image: url('../img/shop-vector.png');
         background-position: left;
     }
     .shop__new-label {
@@ -853,18 +897,26 @@
         width: 100%;
     }
     .swiper-button-prev, .swiper-rtl .swiper-button-next {
-        left: 49px;
+        left: -50px;
         right: auto;
     }
     .swiper-button-prev, .swiper-button-next {
-        top: 46.8%;
+        top: 49.8%;
     }
     .swiper-button-next, .swiper-rtl .swiper-button-prev {
-        right: 49px;
+        right: -36px;
         left: auto;
     }
     .swiper {
         margin-bottom: 31px;
+    }
+    .swiper-wrapper {
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        display: flex;
+        transition-property: transform;
+        box-sizing: content-box;
     }
     .about__form-texarea {
         width: 90%;
@@ -964,6 +1016,10 @@
     .header__nav__list-desctop {
         width: 40%;
     }
+    .bar__nav-active {
+        z-index: 3;
+        display: block;
+    }
     .header__popup {
         position: relative;
         padding: 37px 44px 0px;
@@ -1025,7 +1081,123 @@
     .header__social {
         padding: 10px 6px 7px 3px;
     }
-
+    .ether__btn {
+        position: absolute;
+        left: 123px;
+        width: 14px;
+        border: none;
+        background-color: transparent;
+        height: 18px;
+        background-position: center;
+    }
+    .bar__active {
+        padding: 11px 0px 50px 0px;
+        border: 1px solid #E6E8EC;
+        background-color: #E6E8EC;
+    }
+    .bar__hero {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .ether {
+        display: block;
+        padding-right: 3px;
+        padding-top: 2px;
+        padding-left: 22px;
+    }
+    .ether__btn-close{
+        display: none;
+    }
+    .open{
+        display: block;
+        transition: all .4s linear;
+    }
+    .close{
+        display: none;
+        transition: all .4s linear;
+    }
+    .bar__icon {
+        display: none;
+        margin-right: 0;
+    }
+   
+    .bar__icon-svg {
+        top: 10px;
+        left: 37px;
+    }
+    .bar__icon-link {
+        position: relative;
+        width: 214px;
+        height: 79px;
+        border-left: none;
+        border-right: 1px solid #D9D9D9;
+        outline: none;
+        transition: all .4s ease-in-out;
+    }
+    
+    .bar__icon-active {
+        position: absolute;
+        display: flex;
+        background-color: #ffffff;
+        top: 31px;
+        width: 114%;
+        height: 44px;
+        transition: all .4s linear;
+    }
+    .bar__nav {
+        top: 233px;
+        position: absolute;
+        width: 124.7%;
+        height: 25vh;
+        background-color: white;
+    }
+    .bar-icon__link-eather {
+        display: block;
+    }
+    .bar-icon__link-now {
+        display: block;
+    }
+    .bar {
+        padding: 11px 0px;
+        border: 1px solid #E6E8EC;
+    }
+    .bar-icon__link-eather::before {
+        position: absolute;
+        top: 40px;
+        left: 40px;
+        content: 'Ранее в эфире';
+        font-size: 12px;
+        color: #A1A6B4;
+    }
+    .bar-icon__link-eather::after {
+        position: absolute;
+        top: 55px;
+        left: 42px;
+        content: '\00ABМузыка\00BB';
+        font-size: 16px;
+        color: #121723;
+    }
+    .bar-icon__link-now::before {
+        position: absolute;
+        display: block;
+        top: 40px;
+        left: 40px;
+        content: 'Сейчас в эфире';
+        font-size: 12px;
+        color: #A1A6B4;
+    }
+    .bar-icon__link-now::after {
+        position: absolute;
+        display: block;
+        top: 55px;
+        left: 41px;
+        content: '\00ABКак так?\00BB';
+        font-size: 16px;
+        color: #121723;
+    }
     /* HERO */
 
     .hero__heading {
@@ -1055,10 +1227,7 @@
         width: 92.7%;
         display: none;
     }
-    .bar__icon {
-        display: none;
-        margin-right: 0;
-    }
+   
     /* podcasts */
     .podcasts {
         height: fit-content;
@@ -1364,6 +1533,10 @@
         padding: 0px 8px;
         z-index: 10;
     }
+    .bar__nav-active {
+        z-index: 3;
+        display: block;
+    }
     .bar__icon {
         display: flex;
         margin-right: 0;
@@ -1383,6 +1556,46 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+    }
+    .bar__list {
+        padding: 20px 20px 20px 31px;
+        margin: 0;
+        display: block;
+        flex-direction: unset;
+        justify-content: unset;
+        align-items: unset;
+        column-gap: 92px;
+        columns: 2;
+        width: 68%;
+        height: 170px;
+    }
+    .bar__type:not(:last-child) {
+        margin-right: 0px;
+        margin-bottom: 30px;
+    }
+    .header__nav__item {
+        width: 100px;
+        margin-bottom: 30px;
+    }
+    .bar__nav {
+        top: 220px;
+        position: absolute;
+        width: 124.7%;
+        height: 25vh;
+        background-color: white;
+    }
+    .header__nav-active::before {
+       display: none;
+    }
+    .header__nav-active::after {
+       display: none;
+    }
+    .header__nav {
+        height: 25vh;
+    }
+    .header__nav-active {
+        z-index: 3;
+        display: block;
     }
     .bar-icon__link-eather {
         display: block;
@@ -1639,8 +1852,9 @@
         stroke: #A1A6B4;
         transition: fill 0.3s linear,stroke 0.3s linear;
     }
-    .podcasts__list.show.podcasts__item:nth-child(n+5) {
-        display: flex;
+    .podcasts__item_active.podcasts__item:nth-child(n+5) {
+        display: block;
+        transition: all .4s linear;
     }
     .podcasts__item:nth-child(n+5) {
         display: none;
@@ -1925,6 +2139,10 @@
         background-color: transparent;
         font-size: 16px;
         color: #AA9DFA;
+    }
+    .guests__card-social {
+        padding-left: 2px;
+        width: 50.3%;
     }
 
     /* PLAYLIST */

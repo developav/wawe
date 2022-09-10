@@ -77,6 +77,10 @@ button, input {
     margin-bottom: 1px;
     padding: 0;
 }
+.header__logo__img{
+    width: 160px;
+    padding-top: 6px;
+}
 .header__content{
     display: flex;
     justify-content: space-between;
@@ -121,6 +125,7 @@ button, input {
     width: 88px;
     height: 34px;
     border-radius: 20px;
+    background-color: transparent;
     transition: color 0.3s linear,background-color 0.3s linear;
 }
 .header__search-link{
@@ -270,10 +275,6 @@ button, input {
     font-size: 12px;
     color: #A1A6B4;
 }
-.bar__icon-music{
-
-}
-
 .bar__link {
     text-decoration: none;
     color: #121723;
@@ -297,7 +298,7 @@ button, input {
 }
 .hero__info {
     padding: 89px 0px 0px 0px;
-    width: 55%;
+    width: 57%;
     min-height: 360px;
 }
 .hero__heading {
@@ -356,17 +357,20 @@ button, input {
 .podcasts__item{
     position: relative;
     display: flex;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     flex-direction: row;
     width: 48.7%;
     background-color: #ffffff;
 }
-.podcasts__item:nth-last-child(2){
+/* .podcasts__item:nth-last-child(2){
+    margin-bottom: 60px;
+}
+.podcasts__item:nth-last-child(1){
     margin-bottom: 60px;
 }
 .podcasts__item:nth-last-child(3){
     margin-bottom: 60px;
-}
+} */
 .podcasts__card{
     display: flex;
     flex-direction: column;
@@ -374,7 +378,7 @@ button, input {
     width: 100%;
 }
 .podcasts__list{
-    margin: 0;
+    margin-bottom: 30px;
     padding: 0;
     display: flex;
     flex-direction: row;
@@ -424,8 +428,9 @@ button, input {
     padding: 7px 1px 4px 31px;
     border-top: 1px solid #E6E8EC;
 }
-.podcasts__description-btn span {
+.podcasts__count {
     color: #A1A6B4;
+    transition: color 0.3s linear;
 }
 .podcasts__description-btn:not(:last-child) {
     margin-right: 29px;
@@ -444,6 +449,7 @@ button, input {
     color: #6D31EE;
     background-color: inherit;
     font-size: 20px;
+    transition: color 0.3s linear,background-color 0.3s linear,border 0.3s linear;
 }
 
 /* Programs */
@@ -502,7 +508,13 @@ button, input {
     height: 34px;
     border-radius: 77px;
     border: 2px solid #121723;
+    background-color: transparent;
     font-size: 16px;
+    color: #121723;
+    transition: color 0.3s linear,background-color 0.3s linear;
+}
+.programs__btn-svg{
+    transition: stroke 0.5s linear;
 }
 .programs__button-description{
     margin: 0;
@@ -636,6 +648,7 @@ button, input {
 .quests__group-link:hover{
     color: #AA9DFA;
 }
+
 #accordion {
     width: 730px;
       margin: 0px;
@@ -643,15 +656,15 @@ button, input {
   #accordion > h3 {
       position: relative;
       color: blue;
-      cursor: pointer;
       margin: 0;
       font-size: 20px;
       border-top: 1px solid #A1A6B4;
       border-bottom: 1px solid #A1A6B4;
-      padding: 1.7em 0.5em 1.5em 0em;
+      padding: 1em 0em 1em 0em;
       background: transparent;
       font-weight: normal;
       color: #ffffff;
+      transition: color 0.3s linear;
   }
   #accordion > h3.select__list {
       border-top: 1px solid #A1A6B4;
@@ -666,27 +679,29 @@ button, input {
       color: #333;
       transition: height 1s;
   }
-  .tabs__text {
+.tabs__text {
       font: 12px Arial;
       text-align: justify;
-  }
-
-  .selected__list:after {
-    position: absolute;
-    content: url('/img/Frame\ 137.png');
-    color: #fff;
-    font-size: 18px;
-    font-weight: bold;
-    float: right;
-    top: 21px;
-    right: 3px;
-    padding-top: 3px;
-    margin-right: 0px;
 }
-.select__list:after {
-    content: url('/img/Frame\ 140.png');
+.quest__select {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
+.selected__list {
+    transition: all 0.3s ease-out;
+}
+.select__list svg {
+    transition: all 0.5s ease-out; 
+    transform: rotate(180deg);
+    transition: all 0.5s ease-out;
+}
+#accordion > h3.select__list{
+    border-top: 1px solid #AA9DFA;
+    border-bottom-color: #AA9DFA;
+}
 .panel {
     margin: 0px;
     padding: 27px 0px 23px 0px;
@@ -771,6 +786,7 @@ button, input {
     background-color: transparent;
     font-size: 16px;
     color: #AA9DFA;
+    transition: color 0.3s linear, background-color 0.3s linear;
 }
 
 /* PLAYLIST */
@@ -798,7 +814,7 @@ button, input {
     color: #A1A6B4;
 }
 .playlist__radio-group{
-    margin-bottom: 19px;
+    margin-bottom: 22px;
     display: flex;
     align-items: center;
 }
@@ -810,6 +826,64 @@ button, input {
     width: 30px;
     height: 27px;
 }
+/* для элемента input c type="radio" */
+.custom-radio {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+  /* для элемента label связанного с .custom-radio */
+  .custom-radio+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+  }
+  /* создание в label псевдоэлемента  before со следующими стилями */
+  .custom-radio+label::before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 2px solid #A1A6B4;
+    border-radius: 50%;
+    margin-right: 0.9em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+  }
+  /* стили при наведении курсора на радио */
+  .custom-radio:not(:disabled):not(:checked)+label:hover::before {
+    cursor: pointer;
+    border-color: #6D31EE;
+  }
+
+  /* стили для активной радиокнопки (при нажатии на неё) */
+  .custom-radio:not(:disabled):active+label::before {
+    background-color: #b3d7ff;
+    border-color: #6D31EE;
+  }
+  /* стили для радиокнопки, находящейся в фокусе */
+  .custom-radio:focus+label::before {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  /* стили для радиокнопки, находящейся в фокусе и не находящейся в состоянии checked */
+  .custom-radio:focus:not(:checked)+label::before {
+    cursor: pointer;
+    background-color: #D2D5DD;
+    border-color: #6D31EE;
+  }
+  /* стили для радиокнопки, находящейся в состоянии checked */
+  .custom-radio:checked+label::before {
+    border-color: #6D31EE;
+    background-color: #6D31EE;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+  }
+  /* стили для радиокнопки, находящейся в состоянии disabled */
+  .custom-radio:disabled+label::before {
+    background-color: #e9ecef;
+  }
 .playlist__label{
     font-size: 20px;
 }
@@ -838,7 +912,7 @@ button, input {
     max-width: 300px;
     padding: 38px 47px 38px 0px;
     border-top: 1px solid #D2D5DD;
-    background-image: url(../img/18+.png);
+    background-image: url('../img/18+.png');
     background-repeat: no-repeat;
     background-position: bottom left;
 }
@@ -856,12 +930,14 @@ button, input {
     margin-bottom: 32px;
     height: 221px;
     width: 21.95%;
+    transition: filter 0.3s linear, background-color 0.3s linear;
     
 }
 .playlist__card-description{
     padding: 10px 0px 13px 0px;
     border: 1px solid #E6E8EC;
     width: 98.6%;
+    transition: color 0.3s linear, background-color 0.3s linear;
 }
 .playlist__card-item:not(:nth-child(4n)){
     margin-right: 29px;
@@ -870,6 +946,7 @@ button, input {
     margin: 0;
     padding: 2px 10px 0px 16px;
     font-size: 16px;
+    transition: color 0.3s linear, background-color 0.3s linear;
 }
 .playlist__img{
     width: 100%;
@@ -879,6 +956,7 @@ button, input {
     font-size: 12px;
     line-height: 12px;
     color: #A1A6B4;
+    transition: color 0.3s linear, background-color 0.3s linear;
 }
 .playlist__label-country{
     position: absolute;
@@ -983,6 +1061,10 @@ button, input {
 
     /* ABOUT */
 
+.about__container{
+    position: relative;
+}
+
 .about {
     position: relative;
     height: 1293px;
@@ -996,7 +1078,7 @@ button, input {
     right: 689px;
     width: 10%;
     height: 300px;
-    background-image: url('/img/Spiral\ 3.png');
+    background-image: url('../img/Spiral\ 3.png');
     background-repeat: no-repeat;
     background-position: right;
 }
@@ -1007,7 +1089,7 @@ button, input {
     right: 405px;
     width: 15%;
     height: 300px;
-    background-image: url('/img/Dawn.png');
+    background-image: url('../img/Dawn.png');
     background-repeat: no-repeat;
     background-position: right;
 }

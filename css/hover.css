@@ -13,6 +13,11 @@
     background-color: transparent;
     border: 1px solid #4F28A5;
 }
+.burger:hover{
+    transform: matrix(1.3,0,0,1.3,0,0);
+   
+    transition: all 0.3s linear;
+}
 
 .header__search-icon:hover{
     stroke: #AA9DFA;
@@ -83,8 +88,292 @@
     background-color: #4F28A5;
     border-color: #4F28A5;
 }
+.podcasts__icon:hover path{
+    cursor: pointer;
+    fill: #6D31EE;
+}
+.podcasts__icon:hover circle{
+    cursor: pointer;
+    stroke: #6D31EE;
+}
 .podcasts__icon:hover{
     cursor: pointer;
     stroke: #6D31EE;
-    fill: #FFFFFF;
 }
+.podcasts__icon:focus path{
+    cursor: pointer;
+    fill: #AA9DFA;
+}
+.podcasts__icon:focus circle{
+    cursor: pointer;
+    stroke: #AA9DFA;
+}
+.podcasts__icon:focus{
+    cursor: pointer;
+    stroke: #AA9DFA;
+}
+.podcasts__icon:active path{
+    cursor: pointer;
+    fill: #ffffff;
+}
+.podcasts__icon:active circle{
+    cursor: pointer;
+    stroke: #4F28A5;
+}
+.podcasts__icon:active{
+    cursor: pointer;
+    stroke: #4F28A5;
+    fill: #4F28A5;
+}
+.podcasts__count:hover{
+    color: #6D31EE;
+}
+.poscasts__svg:hover{
+    stroke: #6D31EE;
+}
+.podcasts__description-btn:hover{
+    color: #6D31EE;
+    stroke: #6D31EE;
+}
+.podcasts__count:focus {
+    color: #ffffff;
+}
+.poscasts__svg:focus{
+    stroke: #ffffff;
+}
+.podcasts__description-btn:focus{
+    stroke: #ffffff;
+    color: #ffffff;
+   background-color: #AA9DFA;
+   border-color: #AA9DFA;
+   outline: #AA9DFA;
+}
+.poscasts__svg:active{
+    fill: #4F28A5;
+}
+.podcasts__description-btn:active{
+    fill: #4F28A5;
+    color: #ffffff;
+}
+.podcasts__btn-else:hover{
+    background-color: #6D31EE;
+    color: #FFFFFF;
+    #AA9DFA
+}
+.podcasts__btn-else:focus{
+    background-color:  #AA9DFA;
+    color: #FFFFFF;
+    border-color: #6D31EE;
+}
+.podcasts__btn-else:active{
+    background-color:  #4F28A5;
+    color: #FFFFFF;
+    border-color: #4F28A5;
+}
+.programs__item-card:hover .programs__item-img{
+    cursor: pointer;
+    opacity: 0.6;
+}
+.programs__item-card:hover .programs__item-link{
+    color: #6D31EE;
+}
+.programs__item-link:focus{
+    color: #ffffff;
+    background: #6D31EE;
+}
+.programs__item-card:active .programs__item-img{
+    cursor: pointer;
+    opacity: 1;
+}
+.programs__item-link:active{
+    color: #4F28A5;
+    background: #ffffff;
+}
+
+.select__trigger:hover{
+    background: #F5F6F7;
+}
+.select__trigger:focus{
+    background: #E6E8EC;
+    border-color: #6D31EE;
+}
+.select__trigger:focus{
+    background: #D2D5DD;
+}
+.custom-option:hover{
+    color: #121723;
+    background: #F5F6F7;
+}
+.custom-option:focus{
+    color: #121723;
+    background: #AA9DFA;
+}
+.custom-option:active{
+    color: #121723;
+    background: #E6E8EC;
+}
+.programs__button:hover {
+    background-color: #121723;
+    color: #FFFFFF;
+}
+.programs__button:focus{
+    background-color: #AA9DFA;
+    color: #121723;
+}
+.programs__button:active{
+    background-color: #4F28A5;
+    color: #FFFFFF;
+}
+
+.programs__button:hover .programs__btn-svg path{
+    stroke: #FFFFFF;
+}
+.programs__button:active .programs__btn-svg path{
+    stroke: #121723;
+}
+#accordion > h3:hover{
+    cursor: pointer;
+    color: #AA9DFA;
+}
+#accordion > h3:hover svg path{
+    stroke: #AA9DFA;
+}
+#accordion > h3:hover svg circle{
+    stroke: #AA9DFA;
+}
+#accordion > h3:focus{
+    cursor: pointer;
+    color: #ffffff;
+    background-color: #A1A6B4;
+}
+#accordion > h3:focus svg path{
+    stroke: #A1A6B4;
+}
+#accordion > h3:focus svg circle{
+    stroke: #A1A6B4;
+}
+#accordion > h3:active{
+    cursor: pointer;
+    color: #AA9DFA;
+}
+#accordion > h3:active svg path{
+    stroke: #FFFFFF;
+}
+#accordion > h3:active svg circle{
+    stroke: #AA9DFA;
+    fill: #AA9DFA;
+}
+.guests__card-icon svg path{
+    transition: fill 0.3s linear;
+}
+.guests__card-icon:hover svg path{
+    fill: #6D31EE;
+}
+.guests__card-icon:focus svg path{
+    fill: #AA9DFA;
+}
+.guests__card-icon:active svg path{
+    fill: #4F28A5;
+}
+.guests__card-btn:hover{
+    cursor: pointer;
+    background-color: #AA9DFA;
+    color: #FFFFFF;
+}
+.guests__card-btn:focus{
+    cursor: pointer;
+    background-color: #6D31EE;
+    color: #FFFFFF;
+}
+.guests__card-btn:active{
+    cursor: pointer;
+    background-color: #4F28A5;
+    color: #FFFFFF;
+}
+.playlist__img {
+    position: relative;
+}
+.playlist__card-item:hover .playlist__img{
+    filter: brightness(40%);
+    background-color: #6D31EE;
+}
+.playlist__card-item:hover .playlist__card-description{
+    background-color: #6D31EE;
+    color: #FFFFFF;
+}
+.playlist__card-item:hover .playlist__card-description span h4{
+    color: #FFFFFF;
+}
+.playlist__card-item:focus .playlist__img{
+    filter: brightness(40%);
+}
+.playlist__card-item:focus .playlist__card-description{
+    background-color: #AA9DFA;
+    color: #121723;
+}
+.playlist__card-item:focus .playlist__card-description span{
+    color: #121723;
+}
+.playlist__card-item:active .playlist__img{
+    filter: brightness(40%);
+}
+.playlist__card-item:active .playlist__card-description{
+    background-color: #4F28A5;
+    color: #FFFFFF;
+}
+.playlist__card-item:active .playlist__card-description span{
+    color: #FFFFFF;
+}
+.shop__button:hover{
+    color: #121723;
+    background-color: #F0D288;
+}
+.shop__button:hover svg path:nth-of-type(1){
+   fill: #121723;
+}
+.shop__button:hover svg path:nth-of-type(2){
+    fill: #F0D288;
+}
+.shop__button:focus{
+    color: #121723;
+    background-color: #BB973E;
+    border-color: #F0D288;
+}
+.shop__button:active{
+    color: #121723;
+    background-color: #BB973E;
+}
+.about__form-submit:hover{
+    cursor: pointer;
+    background-color: #AA9DFA;
+    color: #FFFFFF;
+    border-color: transparent;
+}
+.about__form-submit:focus{
+    cursor: pointer;
+    background-color: #AA9DFA;
+    color: #FFFFFF;
+    border-color: #4F28A5;
+}
+.about__form-submit:active{
+    cursor: pointer;
+    color: #FFFFFF;
+    background-color: #4F28A5;
+    border-color: #4F28A5;
+}
+.footer__list-item:hover a{
+    cursor: pointer;
+    color: #6D31EE;
+}
+.footer__list-item:focus a{
+    cursor: pointer;
+    background-color: #AA9DFA;
+    color: #ffffff;
+}
+.footer__list-item:active a{
+    cursor: pointer;
+    color: #4F28A5;
+    background-color: transparent;
+    border: 1px solid #4F28A5;
+}
+
