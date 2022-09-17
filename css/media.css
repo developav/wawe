@@ -2440,6 +2440,7 @@
     }
     .about__card-head {
         margin-bottom: 0px;
+        padding-right: 10px;
         font-size: 14px;
         line-height: 18px;
         font-weight: 500;
