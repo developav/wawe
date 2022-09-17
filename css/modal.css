@@ -70,6 +70,7 @@
 }
 .header__modal-reg{
     color: #6D31EE;
+    transition: all 0.3s linear;
 }
 .header__form{
     margin-bottom: 31px;
@@ -91,15 +92,17 @@
     line-height: 20px;
     font-weight: 400;
     color: #A1A6B4;
+    transition: all 0.3s linear;
 }
-.header__submit{
-    width: 23.7%;
-    height: 70px;
+.header__submit {
+    width: 22%;
+    height: 68px;
     border-radius: 36px;
     background-color: #6D31EE;
     border: none;
     color: #FFFFFF;
     font-size: 20px;
+    transition: all 0.3s linear;
 }
 .show_popup{
     display: block;

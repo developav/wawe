@@ -44,10 +44,10 @@ document.addEventListener('DOMContentLoaded', function(){
         tabsBtn.addEventListener('click',function(event){
             const path = event.currentTarget.dataset.path
 
-            document.querySelectorAll('.guests__card').forEach(function(workСontainer){
-                workСontainer.classList.remove('guests__card-active')
+            document.querySelectorAll('.quests__card').forEach(function(workСontainer){
+                workСontainer.classList.remove('quests__card-active')
             });
-            document.querySelector(`[data-target = "${path}"]`).classList.add('guests__card-active')
+            document.querySelector(`[data-target = "${path}"]`).classList.add('quests__card-active')
         });
         
     });

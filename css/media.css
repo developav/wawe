@@ -21,12 +21,15 @@
     }
     .header__logo{
         width: 100%;
-        padding-top: 23px;
+        padding-top: 20px;
         z-index: 2;
+    }
+    .header__logo-img{
+        width: 112px;
     }
     .header__content{
         width: 100%;
-        padding-top: 38px;
+        padding-top: 36px;
         padding-bottom: 20px;
     }
     .header__nav__list-desctop{
@@ -73,19 +76,19 @@
     .bar__icon {
         margin-right: 0;
     }
-    .bar-icon__link-eather::before {
+    .bar__icon__link-eather::before {
         top: 3px;
         left: 45px;
     }
-    .bar-icon__link-eather::after {
+    .bar__icon__link-eather::after {
         top: 20px;
         left: 45px;
     }
-    .bar-icon__link-now::before {
+    .bar__icon__link-now::before {
         top: 4px;
         left: 44px;
     }
-    .bar-icon__link-now::after {
+    .bar__icon__link-now::after {
         top: 21px;
         left: 36px;
     }
@@ -134,15 +137,27 @@
     }
     /* HERO */
     .hero__info {
-        padding: 86px 0px 0px 0px;
-        width: 63%;
+        padding: 85px 0px 0px 0px;
+        width: 62%;
         min-height: 356px;
     }
+    .hero__info::after {
+        position: absolute;
+        content: '';
+        background-image: url('../img/microphone.png');
+        width: 326px;
+        top: 39px;
+        right: -36px;
+        height: 350px;
+        background-size: 79%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
     .hero__link {
-        padding: 24px 53px 24px 54px;
+        padding: 22px 53px 22px 54px;
     }
     .hero__description {
-        margin-bottom: 34px;
+        margin-bottom: 11px;
     }
     .hero__content {
         padding-top: 84px;
@@ -210,16 +225,16 @@
         bottom: 289px;
     }
 
-    /* GUESTS */
+    /* qUESTS */
 
-    .guests__description {
+    .quests__description {
         margin-bottom: 23px;
         padding: 17px 287px 26px 0px;
     }
-    .quest__panel-tabs:not(:nth-child(4n)) {
+    .panel__tabs:not(:nth-child(4n)) {
         margin-right: 0;
     }
-    .quest__panel-tabs:not(:nth-child(3n)) {
+    .panel__tabs:not(:nth-child(3n)) {
         margin-right: 17px;
     }
     
@@ -241,17 +256,17 @@
         width: 539px;
         margin: 0px;
     }
-    .guests__card {
+    .quests__card {
         width: 31%;
     }
-    .guests__card-item {
+    .quests__card-item {
         padding-top: 10px;
     }
-    .guests__card-social {
+    .quests__card-social {
         padding-left: 3px;
         width: 50.3%;
     }
-    .guests {
+    .quests {
         height: 1172px;
         background-color: #121723;
     }
@@ -565,13 +580,13 @@
         width: 120px;
         margin-bottom: 17px;
     }
-    .bar-icon__link-eather{
+    .bar__icon__link-eather{
         display: none;
     }
-    .bar-icon__link-now::before {
+    .bar__icon__link-now::before {
        display: none;
     }
-    .bar-icon__link-now::after {
+    .bar__icon__link-now::after {
        display: none;
     }
     .bar__icon-link {
@@ -633,6 +648,19 @@
         padding: 86px 0px 0px 0px;
         width: 100%;
         min-height: 356px;
+    }
+    .hero__info::after {
+        display: none;
+        position: absolute;
+        content: '';
+        background-image: url(../img/microphone.png);
+        width: 326px;
+        top: 39px;
+        right: -36px;
+        height: 350px;
+        background-size: 79%;
+        background-position: center;
+        background-repeat: no-repeat;
     }
    
     
@@ -720,15 +748,15 @@
         position: absolute;
     }
     /* Quest */
-    .guests__description {
+    .quests__description {
         margin-bottom: 23px;
         padding: 17px 8px 26px 0px;
     }
-    .guests {
+    .quests {
         height: 1790px;
         background-color: #121723;
     }
-    .quest__panel-tabs:not(:nth-child(13n)) {
+    .panel__tabs:not(:nth-child(13n)) {
         margin-bottom: 24px;
     }
     #accordion {
@@ -739,19 +767,19 @@
     .panel {
         max-height: 213px;
     }
-    .guests__column {
+    .quests__column {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
     }
-    .guests__card {
+    .quests__card {
         width: 100%;
     }
-    .guests__card-social {
+    .quests__card-social {
         padding-left: 2px;
         width: 24.3%;
     }
-    .guests__card-text {
+    .quests__card-text {
         padding: 0px 132px 10px 0px;
         margin: 0px;
         margin-bottom: 19px;
@@ -1154,17 +1182,17 @@
         height: 25vh;
         background-color: white;
     }
-    .bar-icon__link-eather {
+    .bar__icon__link-eather {
         display: block;
     }
-    .bar-icon__link-now {
+    .bar__icon__link-now {
         display: block;
     }
     .bar {
         padding: 11px 0px;
         border: 1px solid #E6E8EC;
     }
-    .bar-icon__link-eather::before {
+    .bar__icon__link-eather::before {
         position: absolute;
         top: 40px;
         left: 40px;
@@ -1172,7 +1200,7 @@
         font-size: 12px;
         color: #A1A6B4;
     }
-    .bar-icon__link-eather::after {
+    .bar__icon__link-eather::after {
         position: absolute;
         top: 55px;
         left: 42px;
@@ -1180,7 +1208,7 @@
         font-size: 16px;
         color: #121723;
     }
-    .bar-icon__link-now::before {
+    .bar__icon__link-now::before {
         position: absolute;
         display: block;
         top: 40px;
@@ -1189,7 +1217,7 @@
         font-size: 12px;
         color: #A1A6B4;
     }
-    .bar-icon__link-now::after {
+    .bar__icon__link-now::after {
         position: absolute;
         display: block;
         top: 55px;
@@ -1290,7 +1318,7 @@
     }
 
     /* GUEST */
-    .guests__head {
+    .quests__head {
         margin-bottom: 12px;
         padding-top: 73px;
         font-size: 40px;
@@ -1512,24 +1540,29 @@
 
     .header__logo {
         width: 100%;
-        padding-top: 19px;
+        padding-top: 22px;
         z-index: 2;
     }
-    
+    .header__logo-img{
+        display: none;
+    }
+    .header__logo-img320{
+        display: block;
+    }
     .header__content {
         position: relative;
         min-width: 280px;
         margin-left: 0;
         width: 100%;
-        padding-top: 27px;
+        padding-top: 33px;
         padding-bottom: 11px;
     }
     .header__nav__button {
         position: absolute;
-        top: -28px;
+        top: -23px;
         right: 24px;
-        width: 68px;
-        height: 30px;
+        width: 67px;
+        height: 31px;
         padding: 0px 8px;
         z-index: 10;
     }
@@ -1597,10 +1630,10 @@
         z-index: 3;
         display: block;
     }
-    .bar-icon__link-eather {
+    .bar__icon__link-eather {
         display: block;
     }
-    .bar-icon__link-now{
+    .bar__icon__link-now{
         display: block;
     }
     .bar__icon {
@@ -1623,7 +1656,7 @@
         transition: all .4s linear;
     }
     
-    .bar-icon__link-eather::before {
+    .bar__icon__link-eather::before {
         position: absolute;
         top: 40px;
         left: 40px;
@@ -1631,7 +1664,7 @@
         font-size: 12px;
         color: #A1A6B4;
     }
-    .bar-icon__link-eather::after {
+    .bar__icon__link-eather::after {
         position: absolute;
         top: 55px;
         left: 42px;
@@ -1643,7 +1676,7 @@
         top: 10px;
         left: 37px;
     }
-    .bar-icon__link-now::before {
+    .bar__icon__link-now::before {
         position: absolute;
         display: block;
         top: 40px;
@@ -1652,7 +1685,7 @@
         font-size: 12px;
         color: #A1A6B4;
     }
-    .bar-icon__link-now::after {
+    .bar__icon__link-now::after {
         position: absolute;
         display: block;
         top: 55px;
@@ -1804,13 +1837,13 @@
     }
     .hero__description {
         margin: 0;
-        margin-bottom: 24px;
+        margin-bottom: 10px;
         padding: 1px 3px 10px 1px;
         font-size: 14px;
         line-height: 21px;
     }
     .hero__link {
-        padding: 14px 44px 18px 44px;
+        padding: 15px 45px 15px 44px;
         font-size: 16px;
     }
     /* PODCAST */
@@ -1867,6 +1900,9 @@
     .podcasts__description-btn:not(:last-child) {
         margin-right: 27px;
     }
+    .podcasts__item:nth-last-child(5) {
+       margin-bottom: 2px;
+    }
     .podcasts__description-btn span {
         padding-left: 2px;
         vertical-align: top;
@@ -1876,12 +1912,20 @@
     .podcasts__item {
         position: relative;
         display: flex;
-        margin-bottom: 28px;
+        margin-bottom: 30px;
         flex-direction: column;
         width: 100%;
+        max-height: fit-content;
         background-color: #ffffff;
     }
+    .podcasts__btn {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 0px;
+    }
     .podcasts__btn-else {
+        margin-bottom: 55px;
         width: 154px;
         height: 44px;
         border-radius: 40px;
@@ -1893,7 +1937,10 @@
 
     /* PROGRAMS */
     .programs {
-        min-height: 888px;
+        min-height: fit-content;
+    }
+    .programs__group-descr {
+        padding: 8px 2px 4px 9px;
     }
     .programs__column {
         width: 100%;
@@ -1911,6 +1958,7 @@
         color: #A1A6B4;
     }
     .programs__arhive {
+        margin-bottom: 75px;
         display: flex;
         position: relative;
         flex-direction: column-reverse;
@@ -1925,7 +1973,7 @@
         min-height: fit-content;
     }
     .programs__button-description {
-        margin-bottom: 7px;
+        margin-bottom: 6px;
         font-size: 14px;
         line-height: 21px;
         max-width: 253px;
@@ -1988,8 +2036,6 @@
         margin-bottom: -5px;
     }
     .programs__item-head {
-        padding-top: 9px;
-        padding-left: 9px;
         font-size: 12px;
         width: 91%;
         line-height: 12px;
@@ -1998,7 +2044,6 @@
     .programs__item-info {
         margin: 0;
         margin-bottom: 13px;
-        padding-left: 9px;
         width: 90%;
         font-size: 9px;
         line-height: 9px;
@@ -2007,7 +2052,6 @@
     .programs__item-link {
         position: absolute;
         bottom: 10px;
-        padding-left: 9px;
         font-family: 'Muller-lightitalic';
         font-size: 12px;
         line-height: 16px;
@@ -2027,11 +2071,11 @@
 
     /* QUEST */
 
-    .guests {
+    .quests {
         height: fit-content;
         background-color: #121723;
     }
-    .guests__head {
+    .quests__head {
         margin-bottom: 10px;
         padding-top: 36px;
         font-size: 24px;
@@ -2043,7 +2087,7 @@
         font-weight: 700;
         color: #FFFFFF;
     }
-    .guests__description {
+    .quests__description {
         margin-bottom: 21px;
         padding: 17px 0px 9px 0px;
     }
@@ -2063,12 +2107,17 @@
         font-size: 16px;
         border-top: 1px solid #A1A6B4;
         border-bottom: 1px solid #A1A6B4;
-        padding: 0.9em 0.5em 1.1em 0em;
+        padding: 0.7em 0em 0.6em 0em;
         background: transparent;
         font-weight: normal;
         color: #ffffff;
     }
-    .selected__list:after {
+    .quests__selected-list {
+        width: 30px;
+        height: 30px;
+        transition: all 0.3s ease-out;
+    }
+    .quests__selected-list:after {
         position: absolute;
         content: url('/img/arrow320up.png');
         color: #fff;
@@ -2098,27 +2147,26 @@
         text-align: left;
         font-size: 14px;
     }
-    .quest__panel-tabs {
+    .panel__tabs {
         width: 103px;
     }
-    .quest__panel-tabs:not(:nth-child(13n)) {
+    .panel__tabs:not(:nth-child(13n)) {
         margin-bottom: 0px;
     }
-    .quest__panel-tabs:not(:nth-child(15n)) {
+    .panel__tabs:not(:nth-child(15n)) {
         margin-bottom: 24px;
     }
-    .quest__panel-tabs:not(:nth-child(3n)) {
+    .panel__tabs:not(:nth-child(3n)) {
         margin-right: 8px;
     }
-    .quest__panel-tabs:not(:nth-child(2n)) {
+    .panel__tabs:not(:nth-child(2n)) {
         margin-right: 39px;
     }
     #accordion {
-        margin-bottom: 30px;
+        margin-bottom: 28px;
         width: 100%;
-        /* margin: 0px; */
     }
-    .guests__card-text {
+    .quests__card-text {
         padding: 0px 3px 10px 0px;
         margin: 0px;
         margin-bottom: 19px;
@@ -2127,8 +2175,8 @@
         line-height: 28.8px;
         color: #A1A6B4;
     }
-    .guests__card-btn {
-        margin-bottom: 66px;
+    .quests__card-btn {
+        margin-bottom: 56px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -2140,9 +2188,13 @@
         font-size: 16px;
         color: #AA9DFA;
     }
-    .guests__card-social {
+    .quests__card-social {
         padding-left: 2px;
-        width: 50.3%;
+        width: 57%;
+    }
+    .quests__card-icon svg{
+        width: 32px;
+    height: 30px;
     }
 
     /* PLAYLIST */
@@ -2191,6 +2243,22 @@
         background-repeat: no-repeat;
         /* background-position: right top; */
     }
+    .custom-radio+label::before {
+        content: '';
+        display: none;
+        width: 1em;
+        height: 1em;
+        flex-shrink: 0;
+        flex-grow: 0;
+        border: 2px solid #A1A6B4;
+        border-radius: 50%;
+        margin-right: 0.9em;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 50% 50%;
+        transition: all 0.3s linear;
+    }
+    
     .playlist__img {
         width: 98%;
     }
@@ -2251,6 +2319,9 @@
         padding: 0px 0px 195px 0px;
         width: 100%;
         margin: 0;
+    }
+    .playlist__group {
+        margin-bottom: 0px;
     }
 
     /* SHOP */
@@ -2317,6 +2388,17 @@
     .shop {
         height: 906px;
         background-color: #292E39;
+    }
+    .shop__head::after {
+        display: none;
+        position: absolute;
+        content: '';
+        top: 113px;
+        right: 2px;
+        width: 100%;
+        height: 12px;
+        background-image: url(../img/shop-vector.png);
+        background-position: left;
     }
 
     /* ABOUT */
