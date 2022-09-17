@@ -79,10 +79,12 @@
                         </a>
                         <h2 class="header__modal-head">Вход</h2>
                         <p class="header__modal-description">Если у вас ещё нет аккаунта, <a class="header__modal-reg" href="#">зарегистрируйтесь</a></p>
-                        <form class="header__form" action="https://jsonplaceholder.typicode.com/posts" method="POST">
-                            <input class="header__input-form" required placeholder="Логин" autocomplete="off" type="text" name="name"  aria-label="Поле ввода Логин"/>
-                            <input class="header__input-form" required placeholder="Пароль" id="phone" autocomplete="off" type="tel" name="phone"  aria-label="Поле ввода пароль">
-                            <input class="header__submit" type="submit" value="Войти" aria-label="Кнопка подтверждение входа"/>	
+                        <form class="header__form" id="form" autocomplete="off" action="https://jsonplaceholder.typicode.com/posts" method="POST">
+                            <label for="name">Логин</label>
+                            <input class="header__input-form" required placeholder="Логин" autocomplete="off" type="text" name="name" id="name"  aria-label="Поле ввода Логин"/>
+                            <label for="password">Пароль</label>
+                            <input class="header__input-form" required placeholder="Пароль" id="phone" autocomplete="off" type="password" id="password" name="password" aria-label="Поле ввода пароль">
+                            <input class="header__submit btn-primary btn" id="submit-btn" type="submit" value="Войти" aria-label="Кнопка подтверждение входа"/>	
                         </form>
                         <div class="header__modal-bottom">
                             <span class="header__modal-text">Войти с помощью:</span>
@@ -1326,9 +1328,9 @@
                         </div>
                     </div>
                     <form action="https://jsonplaceholder.typicode.com/posts" method="POST">
-                        <textarea class="about__form-texarea" name="table" id="about__texarea" cols="86" rows="5" placeholder="Что скажете?" aria-label="Поле ввода текста"></textarea>
-                        <input class="about__form-input" type="text" placeholder="Имя" aria-label="Поле ввода имени">
-                        <input class="about__form-input" type="email" placeholder="Email" aria-label="Поле ввода эмейл">
+                        <textarea class="about__form-texarea" required name="table" id="about__texarea" cols="86" rows="5" placeholder="Что скажете?" aria-label="Поле ввода текста"></textarea>
+                        <input class="about__form-input" required type="text" placeholder="Имя" aria-label="Поле ввода имени">
+                        <input class="about__form-input" required type="email" placeholder="Email" aria-label="Поле ввода эмейл">
                         <div class="about__form-btn-group">
                             <button class="about__form-submit" type="submit">Отправить</button>
                             <input class="about__form-checkbox" id="checkbox" type="checkbox" aria-label="Подтверждение согласия на обработку персональных данных">
@@ -1409,5 +1411,9 @@
     </footer>
     <script defer src="js/custom-select.js"></script>
     <script defer src="js/main.js"></script>
+    <!-- <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+    <script>
+        const validate = new window.JustValidate('#form');
+    </script> -->
 </body>
 </html>

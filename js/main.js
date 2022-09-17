@@ -1,3 +1,4 @@
+import JustValidate from 'just-validate';
 const swiper = new Swiper('.swiper', {
     // Optional parameters
     direction: 'horizontal',
@@ -37,6 +38,29 @@ const swiper = new Swiper('.swiper', {
       }
     }
   });
+
+  const validation = new JustValidate('#form', {
+    errorFieldCssClass: 'is-invalid',
+  });
+  
+  validation
+    .addField('#name', [
+      {
+        rule: 'minLength',
+        rule: 'required',
+        value: 3,
+      },
+      {
+        rule: 'maxLength',
+        value: 30,
+      },
+    ])
+    .addField('#password', [
+      {
+        rule: 'password',
+      },
+    ]);
+
 
 
 document.addEventListener('DOMContentLoaded', function(){
