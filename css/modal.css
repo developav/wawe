@@ -79,7 +79,11 @@
     padding-bottom: 29px;
     border-bottom: 1px solid rgba(230, 232, 236, 0.4);
 }
+.header__input-form.is-invalid{
+    border: 2px solid red;
+}
 .header__input-form{
+    position: relative;
     margin-bottom: 30px;
     margin-right: 27px;
     padding: 1px 1px 1px 29px;
@@ -93,6 +97,18 @@
     font-weight: 400;
     color: #A1A6B4;
     transition: all 0.3s linear;
+}
+.error{
+    position: absolute;
+    left: 95px;
+    top: 181px;
+    color: red;
+}
+.errorPas{
+    position: absolute;
+    left: 95px;
+    top: 284px;
+    color: red;
 }
 .header__submit {
     width: 22%;

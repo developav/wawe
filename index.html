@@ -16,6 +16,7 @@
     <title>Радио W-Wave</title>
 </head>
 <body>
+   
     <header class="header">
         <div class="header__top">
         <div class="container header__container">
@@ -79,13 +80,11 @@
                         </a>
                         <h2 class="header__modal-head">Вход</h2>
                         <p class="header__modal-description">Если у вас ещё нет аккаунта, <a class="header__modal-reg" href="#">зарегистрируйтесь</a></p>
-                        <form class="header__form" id="form" autocomplete="off" action="https://jsonplaceholder.typicode.com/posts" method="POST">
-                            <label for="name">Логин</label>
-                            <input class="header__input-form" required placeholder="Логин" autocomplete="off" type="text" name="name" id="name"  aria-label="Поле ввода Логин"/>
-                            <label for="password">Пароль</label>
-                            <input class="header__input-form" required placeholder="Пароль" id="phone" autocomplete="off" type="password" id="password" name="password" aria-label="Поле ввода пароль">
-                            <input class="header__submit btn-primary btn" id="submit-btn" type="submit" value="Войти" aria-label="Кнопка подтверждение входа"/>	
-                        </form>
+                        <form class="header__form" action="#" id="form" autocomplete="off">
+                            <input type="text" class="form__input form-control header__input-form" placeholder="Логин" autocomplete="off" name="name" id="name"/>
+                            <input type="password" class="form__input form-control header__input-form" placeholder="Пароль" autocomplete="off" name="password" id="password"/>
+                            <input class="btn btn-primary header__submit" type="submit" value="Войти" aria-label="Кнопка подтверждение входа"/>
+                          </form>
                         <div class="header__modal-bottom">
                             <span class="header__modal-text">Войти с помощью:</span>
                             <div class="header__social">
@@ -184,13 +183,11 @@
                 <h2 class="podcasts__heading">Подкасты</h2>
                     <ul class="podcasts__list">
                         <li class="podcasts__item">
-                            <div class="podcasts__image">
                                 <span class="podcasts__date">14 июня</span>
                                 <picture>
                                     <source media="(max-width:600px)" srcset="img/1p320.png">
                                     <img class="podcasts__img" src="img/podkast1.png" alt="Картинка исполнителя">
                                 </picture>
-                            </div>
                             <div class="podcasts__card">
                                 <div  class="podcasts__item-group">
                                     <div class="podcasts__info-group">
@@ -553,7 +550,7 @@
                             <div class="programs__group-card">
                               <ul class="programs__list">
                                 <li class="programs__item">
-                                    <article class="programs__item-card">
+                                    <div class="programs__item-card">
                                         <img class="programs__item-img" src="img/image1.png" alt="Изображение карточки передачи">
                                         <div class="programs__group-descr">
                                             <h3 class="programs__item-head">О людях и книгах</h3>
@@ -564,10 +561,10 @@
                                                 </svg>
                                             </a>
                                         </div>
-                                    </article>
+                                    </div>
                                </li>
                                <li class="programs__item">
-                                    <article class="programs__item-card">
+                                    <div class="programs__item-card">
                                         <img class="programs__item-img" src="img/image1-2.png" alt="Изображение карточки передачи">
                                         <div class="programs__group-descr">
                                             <h3 class="programs__item-head">Графомания td</h3>
@@ -578,10 +575,10 @@
                                                 </svg>
                                             </a>
                                         </div>
-                                    </article>
+                                    </div>
                                 </li>
                                 <li class="programs__item">
-                                    <article class="programs__item-card">
+                                    <div class="programs__item-card">
                                         <img class="programs__item-img" src="img/image1-3.png" alt="Изображение карточки передачи">
                                         <div class="programs__group-descr">
                                             <h3 class="programs__item-head">Не Рим, не Троя</h3>
@@ -592,10 +589,10 @@
                                                 </svg>
                                             </a>
                                         </div> 
-                                    </article>
+                                    </div>
                                 </li>
                                 <li class="programs__item">
-                                    <article class="programs__item-card">
+                                    <div class="programs__item-card">
                                         <img class="programs__item-img" src="img/image1-4.png" alt="Изображение карточки передачи">
                                         <div class="programs__group-descr">
                                             <h3 class="programs__item-head">Эрудит</h3>
@@ -606,10 +603,10 @@
                                                 </svg>
                                             </a>
                                         </div> 
-                                    </article>
+                                    </div>
                                 </li>
                                 <li class="programs__item">
-                                    <article class="programs__item-card">
+                                    <div class="programs__item-card">
                                         <img class="programs__item-img" src="img/image1-5.png" alt="Изображение карточки передачи">
                                         <div class="programs__group-descr">
                                             <h3 class="programs__item-head">Тонкости эпох</h3>
@@ -620,10 +617,10 @@
                                             </svg>
                                         </a>
                                         </div> 
-                                    </article>
+                                    </div>
                                 </li>
                                 <li class="programs__item">
-                                    <article class="programs__item-card">
+                                    <div class="programs__item-card">
                                         <img class="programs__item-img" src="img/image1-6.png" alt="Изображение карточки передачи">
                                         <div class="programs__group-descr">
                                             <h3 class="programs__item-head">Живые мысли</h3>
@@ -634,7 +631,7 @@
                                             </svg>
                                         </a>
                                         </div>
-                                    </article>
+                                    </div>
                                 </li>
                               </ul>
                             </div>
@@ -1327,16 +1324,23 @@
                             </svg>
                         </div>
                     </div>
-                    <form action="https://jsonplaceholder.typicode.com/posts" method="POST">
-                        <textarea class="about__form-texarea" required name="table" id="about__texarea" cols="86" rows="5" placeholder="Что скажете?" aria-label="Поле ввода текста"></textarea>
-                        <input class="about__form-input" required type="text" placeholder="Имя" aria-label="Поле ввода имени">
-                        <input class="about__form-input" required type="email" placeholder="Email" aria-label="Поле ввода эмейл">
+                    <form class="about__form" id="formAbout" autocomplete="off" action="https://jsonplaceholder.typicode.com/posts" method="POST">
+                        <textarea class="about__form-texarea" name="table" type="text" id="about__texarea" cols="86" rows="5" placeholder="Что скажете?" aria-label="Поле ввода текста"></textarea>
+                        <div class="about__form-flex">
+                            <div class="col">
+                                <label for="nameAbout"></label>
+                                <input class="form__input form-control about__form-input" id="nameAbout"  type="text" placeholder="Имя" aria-label="Поле ввода имени">
+                            </div>
+                            <div class="col">
+                                <label for="email"></label>
+                                <input class="form__input form-control about__form-input" id="email" type="email" placeholder="Email" aria-label="Поле ввода эмейл">
+                            </div>
+                        </div>
                         <div class="about__form-btn-group">
-                            <button class="about__form-submit" type="submit">Отправить</button>
+                            <button class="btn btn-primary about__form-submit" id="submit-btn">Отправить</button>
                             <input class="about__form-checkbox" id="checkbox" type="checkbox" aria-label="Подтверждение согласия на обработку персональных данных">
                             <label class="about__form-label" for="checkbox">Согласен на обработку персональных данных</label>
-                        </div>
-                        
+                        </div> 
                     </form>
             </div>
         </section>
@@ -1410,10 +1414,6 @@
         </div>
     </footer>
     <script defer src="js/custom-select.js"></script>
-    <script defer src="js/main.js"></script>
-    <!-- <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
-    <script>
-        const validate = new window.JustValidate('#form');
-    </script> -->
+    <script defer type="module" src="js/main.js"></script>
 </body>
 </html>

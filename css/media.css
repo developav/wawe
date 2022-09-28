@@ -426,7 +426,15 @@
         margin-right: 0;
     }
     .about__form-input {
-        width: 44.2%;
+        width: 90.2%;
+    }
+    .col:nth-last-child(1){
+        margin-right: 0;
+    }
+    .col {
+        position: relative;
+        width: 48.4%;
+        margin-right: 27px;
     }
     .about__form-submit {
         margin-bottom: 30px;
@@ -949,6 +957,16 @@
     .about__form-texarea {
         width: 90%;
     }
+    .about__form-flex {
+        display: flex;
+        flex-direction: column;
+    }
+    .col {
+        position: relative;
+        width: 100%;
+        margin-right: 27px;
+    }
+    
     .about__form-input {
         margin-bottom: 30px;
         margin-right: 27px;
@@ -1026,6 +1044,19 @@
 @media (max-width:600px){
     .container {
         max-width: 380px;
+    }
+
+    .error {
+        position: absolute;
+        left: 69px;
+        top: 136px;
+        font-size: 12px;
+    }
+    .errorPas {
+        position: absolute;
+        left: 70px;
+        top: 207px;
+        font-size: 12px;
     }
 
     /* HEADER */
@@ -1359,6 +1390,13 @@
         font-weight: 400;
         color: #A1A6B4;
     }
+    .just-validate-error-label {
+        position: absolute;
+        color: rgb(184, 17, 17);
+        top: 5px;
+        font-size: 11px;
+        left: 28px;
+    }
     .about__form-texarea {
         width: 86%;
     }
@@ -1416,6 +1454,9 @@
         padding: 0px 0px 250px 0px;
         width: 100%;
         margin: 0;
+    }
+    .custom-radio+label::before {
+        display: none;
     }
 
     .playlist__radio-column {
@@ -1536,6 +1577,18 @@
         max-width: 256px;
     }
 
+    .errorPas {
+        position: absolute;
+        left: 39px;
+        top: 192px;
+        font-size: 10px;
+    }
+    .error {
+        position: absolute;
+        left: 40px;
+        top: 130px;
+        font-size: 10px;
+    }
     /* HEADER */
 
     .header__logo {

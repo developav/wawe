@@ -1,3 +1,6 @@
+.about__form-input.is-invalid:focus {
+    border: 2px solid red;
+}
 .header__nav__link:hover{
     cursor: pointer;
     color: #6D31EE;
@@ -42,6 +45,7 @@
 }
 .header__nav__button:active{
     background-color: #4F28A5;
+    border-color: #4F28A5;
     color: #FFFFFF;
 }
 
@@ -156,6 +160,7 @@
 }
 .podcasts__description-btn:active .podcasts__description-svg path{
     fill-rule: nonzero;
+    clip-rule: nonzero;
     fill: #4F28A5;
 }
 .podcasts__description-btn:active .podcasts__count{
@@ -251,6 +256,9 @@
 }
 #accordion > h3:hover svg circle{
     stroke: #AA9DFA;
+}
+.quests__select:focus h3{
+    background-color: #A1A6B4 ;
 }
 #accordion > h3:focus{
     cursor: pointer;
@@ -375,6 +383,18 @@
     color: #FFFFFF;
     background-color: #4F28A5;
     border-color: #4F28A5;
+}
+.swiper-button-next:hover svg circle{
+    stroke: #AA9DFA;
+}
+.swiper-button-next:hover svg path{
+    stroke: #AA9DFA;
+}
+.swiper-button-prev:hover svg circle{
+    stroke: #AA9DFA;
+}
+.swiper-button-prev:hover svg path{
+    stroke: #AA9DFA;
 }
 .footer__list-item:hover a{
     cursor: pointer;

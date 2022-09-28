@@ -71,6 +71,25 @@ button, input {
     max-width: 1110px;
     margin: 0 auto;
 }
+.about__form-input.is-invalid{
+    border: 2px solid red;
+}
+.col{
+    position: relative;
+    width: 40.4%;
+    margin-right: 27px;
+}
+.just-validate-error-label{
+    position: absolute;
+    color: rgb(184, 17, 17);
+    top: 5px;
+    left: 28px;
+}
+.about__form-flex{
+    display: flex;
+    flex-direction: row;
+}
+
 /* Header */
 
 .header {
@@ -124,6 +143,8 @@ button, input {
     width: 88px;
     height: 34px;
     border-radius: 20px;
+    border-style: solid;
+    border-color: #121723;
     background-color: transparent;
     transition: color 0.3s linear,background-color 0.3s linear;
 }
@@ -329,6 +350,7 @@ button, input {
     line-height: 24px;
 }
 .hero__link{
+    margin-bottom: 70px;
     display: inline-block;
     padding: 23px 54px 23px 53px;
     border-radius: 35px;
@@ -341,7 +363,7 @@ button, input {
 /* Podkast */
 
 .podcasts {
-    height: 1045px;
+    height: fit-content;
     background-color: #F2F2F2;
 }
 .podcasts__date{
@@ -365,8 +387,17 @@ button, input {
     margin-bottom: 30px;
     flex-direction: row;
     width: 48.7%;
-    max-height: 140px;
     background-color: #ffffff;
+}
+.podcasts__img{
+    height: 100%;
+    width: 121%;
+}
+.podcasts__image{
+    font-size: 0;
+}
+.podcasts__item picture{
+    font-size: 0;
 }
 /* .podcasts__item:nth-last-child(2){
     margin-bottom: 60px;
@@ -403,21 +434,21 @@ button, input {
     padding: 20px 10px 9px 1px;
 }
 .podcasts__time{
-    padding: 10px 10px 10px 30px;
+    padding: 10px 10px 10px 48px;
     font-size: 12px;
 }
-.podcasts__name{
-    padding: 4px 10px 0px 30px;
+.podcasts__name {
+    padding: 4px 10px 0px 48px;
     font-size: 20px;
 }
 .podcasts__singer{
     margin: 0;
-    padding: 1px 10px 10px 30px;
+    padding: 1px 10px 10px 48px;
     font-size: 16px;
     color: #A1A6B4;
 }
 .podcasts__button{
-    padding-top: 13px;
+    padding-top: 21px;
     margin-right: 24px;
     height: 61px;
     border: none;
@@ -435,7 +466,7 @@ button, input {
     transition: all 0.3s linear;
 }
 .podcasts__description{
-    padding: 9px 1px 4px 31px;
+    padding: 9px 1px 4px 48px;
     border-top: 1px solid #E6E8EC;
 }
 .podcasts__count {
@@ -452,6 +483,7 @@ button, input {
     justify-content: center;
 }
 .podcasts__btn-else{
+    margin-bottom: 91px;
     width: 232px;
     height: 65px;
     border-radius: 40px;
@@ -467,6 +499,7 @@ button, input {
     min-height: 752.8px;
 }
 .programs__group{
+    margin-bottom: 90px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -556,7 +589,6 @@ button, input {
 }
 .programs__item{
     width: 31.15%;
-    height: 48.3%;
     box-sizing: border-box;
     border: 1px solid #E6E8EC;
 }
@@ -924,9 +956,6 @@ button, input {
     max-width: 300px;
     padding: 38px 47px 38px 0px;
     border-top: 1px solid #D2D5DD;
-    background-image: url('../img/18+.png');
-    background-repeat: no-repeat;
-    background-position: bottom left;
 }
 .playlist__card {
     display: flex;
@@ -1083,7 +1112,7 @@ button, input {
 
 .about {
     position: relative;
-    height: 1293px;
+    height: fit-content;
     background-color: #121723;
 
 }
@@ -1176,7 +1205,7 @@ button, input {
     margin-bottom: 32px;
     margin-right: 27px;
     padding: 1px 1px 1px 29px;
-    width: 37.2%;
+    width: 92.2%;
     height: 65px;
     border: 1px solid #FFFFFF;
     border-radius: 40px;
@@ -1235,6 +1264,7 @@ button, input {
 }
 
 .about__form-checkbox+label {
+    margin-bottom: 95px;
     font-size: 12px;
     line-height: 12px;
     font-weight: 500;
@@ -1327,6 +1357,7 @@ button, input {
 
 .header__social-link {
 }
+
 
 
 

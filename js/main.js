@@ -1,4 +1,27 @@
-import JustValidate from 'just-validate';
+
+import JustValidate from '../node_modules/just-validate/dist/just-validate.es.js'
+
+
+const validation = new JustValidate('#formAbout', {
+    errorFieldCssClass: 'is-invalid', 
+});
+validation
+  .addField('#nameAbout', [
+    {
+      rule: 'required',
+      value: 3,
+      errorMessage: 'Введите логин',
+    },
+  ])
+  .addField('#email', [
+    {
+      rule: 'required',
+      rule: 'email',
+      errorMessage: 'Введите корректный Email',
+    },
+  ])
+
+
 const swiper = new Swiper('.swiper', {
     // Optional parameters
     direction: 'horizontal',
@@ -39,29 +62,7 @@ const swiper = new Swiper('.swiper', {
     }
   });
 
-  const validation = new JustValidate('#form', {
-    errorFieldCssClass: 'is-invalid',
-  });
-  
-  validation
-    .addField('#name', [
-      {
-        rule: 'minLength',
-        rule: 'required',
-        value: 3,
-      },
-      {
-        rule: 'maxLength',
-        value: 30,
-      },
-    ])
-    .addField('#password', [
-      {
-        rule: 'password',
-      },
-    ]);
-
-
+// open people
 
 document.addEventListener('DOMContentLoaded', function(){
     document.querySelectorAll('.quests__group-link').forEach(function(tabsBtn){
@@ -76,6 +77,8 @@ document.addEventListener('DOMContentLoaded', function(){
         
     });
 });
+
+//Popup container 
 
 (function(){
   let button = document.querySelector('.header__nav__button');
@@ -101,9 +104,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
 })();
 
-
-
-
+// Accordion about block
 
 let accordion = document.getElementById('accordion');
 accordion.addEventListener('click', change);
@@ -132,12 +133,16 @@ function showText(textEl) {
   textEl.style.height = textEl.scrollHeight + 'px';
 }
 
+//Burger menu
+
 let headButton = document.getElementById('button')
 headButton.addEventListener('click', function(){
   headButton.classList.toggle('nav__btn_active');
   document.querySelector('.header__nav').classList.toggle('header__nav-active');
   document.querySelector('.bar__nav').classList.toggle('bar__nav-active');
 })
+
+//Open list at 320px
 
 let etherButton = document.querySelector('.ether__btn');
 let barIcon = document.querySelector('.bar__icon');
@@ -151,11 +156,37 @@ etherButton.addEventListener('click', function(){
   closeButton.classList.toggle('open');
 });
 
+//Btn open podcasts
 let butttonPodcast = document.querySelector('.podcasts__btn-else');
 let listItem = document.querySelector('.podcasts__item');
-
 butttonPodcast.addEventListener('click',function(){
   document.querySelectorAll('.podcasts__item').forEach(function(workСontainer){
     workСontainer.classList.toggle('podcasts__item_active')
 });
 })
+
+//Validation form popup
+let form = document.querySelector('.header__form')
+let validateBtn = form.querySelector('.header__submit')
+let from = form.querySelector('.header__input-form')
+let password = document.getElementById("password")
+
+form.addEventListener('submit', function(event){
+
+  if(!from.value || !password.value){
+    event.preventDefault()
+    from.classList.add('is-invalid')
+    let error = document.createElement('div')
+    error.className = 'error'
+    error.style.color = 'red'
+    error.innerHTML = 'Введите логин'
+    from.parentElement.insertBefore(error,from)
+    password.classList.add('is-invalid')
+    let errorPas = document.createElement('div')
+    errorPas.className = 'errorPas'
+    errorPas.style.color = 'red'
+    errorPas.innerHTML = 'Введите пароль'
+    password.parentElement.insertBefore(errorPas,password)
+  }
+})
+
