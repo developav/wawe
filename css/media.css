@@ -147,7 +147,7 @@
         background-image: url('../img/microphone.png');
         width: 326px;
         top: 39px;
-        right: -36px;
+        right: -15px;
         height: 350px;
         background-size: 79%;
         background-position: center;
@@ -171,7 +171,7 @@
         width: 48.2%;
     }
     .podcasts__name {
-        padding: 4px 10px 0px 29px;
+        padding: 4px 10px 0px 1px;
     }
     .programs__column {
         width: 32%;
@@ -475,29 +475,17 @@
    .container {
     max-width: 542px;
 }
-    .header__nav {
-        position: absolute;
-        z-index: 2;
-        top: 18px;
-        left: -140px;
-        display: none;
-        width: 149%;
-        padding-top: 104px;
-        height: 100vh;
-        background-color: #D2D5DD ;
-        background-repeat: no-repeat;
-        background-position: 295px 85px;
-    }
+    
     .header__search-link {
         position: relative;
         width: 50px;
         height: 28px;
         margin-right: 23px;
-    }
+    } 
     .header__nav-active {
         z-index: 3;
         display: block;
-    }
+    } 
     .header__nav-active::before {
         position: absolute;
         top: 109px;
@@ -561,6 +549,19 @@
     .header__nav__list-desctop {
         width: 40%;
         columns: 2;
+    }
+    .header__form-search__btn-search {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+        outline: none;
+        -webkit-transition: all .4s ease-in-out;
+        -o-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out;
     }
    
     .header__nav__list-desctop {
@@ -661,7 +662,7 @@
         display: none;
         position: absolute;
         content: '';
-        background-image: url(../img/microphone.png);
+        background-image: url('../img/microphone.png');
         width: 326px;
         top: 39px;
         right: -36px;
@@ -685,7 +686,7 @@
         min-height: 1322px;
     }
     .programs__column {
-        width: 49%;
+        width: 100%;
     }
     .programs__group-card {
         padding: 16px 0px 0px 0px;
@@ -727,6 +728,10 @@
     .programs__item {
         width: 47.3%;
         height: 33%;
+    }
+    .podcasts__img {
+        height: auto;
+        width: 100%;
     }
     .programs__button-description {
         margin: 0;
@@ -1288,6 +1293,11 @@
     }
    
     /* podcasts */
+
+    .podcasts__item picture {
+        font-size: 0;
+        width: 100%;
+    }
     .podcasts {
         height: fit-content;
         background-color: #F2F2F2;

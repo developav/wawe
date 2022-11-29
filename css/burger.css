@@ -1,0 +1,132 @@
+
+li{
+    list-style-type: none; 
+ }
+ .header__nav-list{
+    padding: 0;
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: space-between;
+     align-content: center;
+ }
+ #menu__toggle{
+     display: none;
+ }
+ .menu__btn{
+     display: none;
+ }
+
+@media(max-width: 850px){
+    #menu__toggle {
+        opacity: 0;
+    }      
+    #menu__toggle:checked ~ .menu__btn > span {
+      transform: rotate(45deg);
+    }
+    #menu__toggle:checked ~ .menu__btn > span::before {
+      top: 0;
+      transform: rotate(0);
+    }
+    #menu__toggle:checked ~ .menu__btn > span::after {
+      top: 0;
+      transform: rotate(90deg);
+    }
+    #menu__toggle:checked ~ .header__menu-box {
+      visibility: visible;
+      left: 0;
+      z-index: 15;
+    }     
+    .menu__btn > span,
+    .menu__btn > span::before,
+    .menu__btn > span::after {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: #0a0808;
+      transition-duration: .25s;
+    }
+    .menu__btn > span::before {
+      content: '';
+      top: -6px;
+    }
+    .menu__btn > span::after {
+      content: '';
+      top: 8px;
+    }
+
+    .header__nav-list {
+        padding: 0;
+        display: table-column-group;
+        column-count: 2;
+       
+    }
+    
+    /* Change colors menu */
+    .header__nav-link{
+        color: #333;
+        text-decoration: none;
+        transition: all 0.3s linear;
+    }
+    .menu__color{
+      background: rgb(161, 161, 161);
+    }
+    
+    /* Settings for animation and adaptive */
+    .header__menu-box {
+        position: fixed;
+        visibility: hidden;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 80px 0;
+        list-style: none;
+        box-shadow: 1px 0px 6px rgb(0 0 0 / 20%);
+        transition-duration: .25s;
+    }
+    
+    /* Settings burger button and position for him */
+    .menu__btn {
+        display: flex;
+        align-items: center;
+        position: fixed;
+        top: 90px;
+        left: 155px;
+        width: 26px;
+        height: 26px;
+        cursor: pointer;
+        z-index: 20;
+    }
+    /* Settings nav menu */
+    .header__menu-item {
+        display: block;
+        padding: 12px 24px;
+        color: #333;
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+        text-decoration: none;
+        transition-duration: .25s;
+    }
+    
+    /* Hover effect for burger menu */
+    .header__menu-item:hover {
+        
+    }
+    .header__nav-link:hover {
+        color: aqua;
+    }
+    /* hover effect color burger  */
+    .menu__btn:hover span{
+        background-color: blue;
+    }
+    .menu__btn:hover span::before{
+        background-color: blue;
+    }
+    .menu__btn:hover span::after{
+        background-color: blue;
+    }
+}

@@ -5,13 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/normolise.css">
+    <link rel="stylesheet" href="css/burger.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/custom-select.css">
     <link rel="stylesheet" href="css/swiper.css">
     <link rel="stylesheet" href="css/modal.css">
     <link rel="stylesheet" href="css/hover.css">
     <link rel="stylesheet" href="css/media.css">
-    <link rel="icon" href="/img/favicon.png" type="image/x-icon">
+    <link rel="icon" href="img/favicon.png" type="image/x-icon">
     <script defer src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <title>Радио W-Wave</title>
 </head>
@@ -39,8 +40,41 @@
                             </svg>                                
                         </a>
                     <div class="header__content">
-                        <button id="button" class="header__burger burger" aria-label="Раскрывающееся меню"></button>
-                        <nav class="header__nav">
+                        <!-- <button id="button" class="header__burger burger" aria-label="Раскрывающееся меню"></button> -->
+                        <nav class="header__nav nav header__nav-bar">
+                            <input id="menu__toggle" type="checkbox">
+                            <label class="menu__btn" for="menu__toggle">
+                                <span></span>
+                            </label>
+                            <ul class="header__nav-list header__menu-box menu__color">
+                                <li class="header__nav__item header__nav-item header__menu-item ">
+                                    <a class="header__nav__link header__nav-link" href="#podcast">Подкасты</a>
+                                </li>
+                                <li class="header__nav__item header__nav-item header__menu-item">
+                                    <a class="header__nav__link header__nav-link" href="#program">Передачи</a>
+                                </li>
+                                <li class="header__nav__item header__nav-item header__menu-item">
+                                    <a class="header__nav__link header__nav-link" href="#guest">Гости</a>
+                                </li>
+                                <li class="header__nav__item header__nav-item header__menu-item">
+                                    <a class="header__nav__link header__nav-link" href="#playlist">Плейлисты</a>
+                                </li>
+                                <li class="header__nav__item header__nav-item header__menu-item">
+                                    <a class="header__nav__link header__nav-link" href="#about">О нас</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <form class="header__search-link">
+                            <input class="header__form-search__input-search" type="text" placeholder="Поиск по сайту">
+                            <button class="header__form-search__btn-search btn-reset" type="submit" aria-label="Поиск по сайту">
+                                <svg class="header__search-icon" width="24" height="24" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M20.9999 21L16.6499 16.65"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </form>  
+                        <button class="header__nav__button"  rel="reg_form" aria-label="Кнопка входа">Вход</button>     
+                        <!-- <nav class="header__nav">
                             <ul class="header__nav__list-desctop">
                              <li class="header__nav__item">
                                  <a class="header__nav__link" href="#podcast">Подкасты</a>
@@ -68,7 +102,7 @@
                                 </svg>
                             </button>
                         </form>  
-                        <button class="header__nav__button"  rel="reg_form" aria-label="Кнопка входа">Вход</button>     
+                        <button class="header__nav__button"  rel="reg_form" aria-label="Кнопка входа">Вход</button>      -->
                     </div>
                 <div class="header__pop-modal">
                     <div class="header__popup header__popup-close">
@@ -555,13 +589,13 @@
                                         <div class="programs__group-descr">
                                             <h3 class="programs__item-head">О людях и книгах</h3>
                                             <p class="programs__item-info">Анонсируется отдельно</p>
-                                            <a class="programs__item-link" href="#">Подробнее 
-                                                <svg class="programs__item-svg" width="21" height="8" viewBox="0 0 21 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M20.3536 4.35355C20.5488 4.15829 20.5488 3.84171 20.3536 3.64645L17.1716 0.464466C16.9763 0.269204 16.6597 0.269204 16.4645 0.464466C16.2692 0.659728 16.2692 0.976311 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53553C16.6597 7.7308 16.9763 7.7308 17.1716 7.53553L20.3536 4.35355ZM0 4.5H20V3.5H0V4.5Z" fill="#121723"/>
-                                                </svg>
-                                            </a>
                                         </div>
                                     </div>
+                                    <a class="programs__item-link" href="#">Подробнее 
+                                        <svg class="programs__item-svg" width="21" height="8" viewBox="0 0 21 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20.3536 4.35355C20.5488 4.15829 20.5488 3.84171 20.3536 3.64645L17.1716 0.464466C16.9763 0.269204 16.6597 0.269204 16.4645 0.464466C16.2692 0.659728 16.2692 0.976311 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53553C16.6597 7.7308 16.9763 7.7308 17.1716 7.53553L20.3536 4.35355ZM0 4.5H20V3.5H0V4.5Z" fill="#121723"/>
+                                        </svg>
+                                    </a>
                                </li>
                                <li class="programs__item">
                                     <div class="programs__item-card">
@@ -569,13 +603,13 @@
                                         <div class="programs__group-descr">
                                             <h3 class="programs__item-head">Графомания td</h3>
                                             <p class="programs__item-info">По понедельникам в 10:00</p>
-                                            <a class="programs__item-link" href="#">Подробнее 
-                                                <svg class="programs__item-svg" width="21" height="8" viewBox="0 0 21 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M20.3536 4.35355C20.5488 4.15829 20.5488 3.84171 20.3536 3.64645L17.1716 0.464466C16.9763 0.269204 16.6597 0.269204 16.4645 0.464466C16.2692 0.659728 16.2692 0.976311 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53553C16.6597 7.7308 16.9763 7.7308 17.1716 7.53553L20.3536 4.35355ZM0 4.5H20V3.5H0V4.5Z" fill="#121723"/>
-                                                </svg>
-                                            </a>
                                         </div>
                                     </div>
+                                    <a class="programs__item-link" href="#">Подробнее 
+                                        <svg class="programs__item-svg" width="21" height="8" viewBox="0 0 21 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20.3536 4.35355C20.5488 4.15829 20.5488 3.84171 20.3536 3.64645L17.1716 0.464466C16.9763 0.269204 16.6597 0.269204 16.4645 0.464466C16.2692 0.659728 16.2692 0.976311 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53553C16.6597 7.7308 16.9763 7.7308 17.1716 7.53553L20.3536 4.35355ZM0 4.5H20V3.5H0V4.5Z" fill="#121723"/>
+                                        </svg>
+                                    </a>
                                 </li>
                                 <li class="programs__item">
                                     <div class="programs__item-card">
@@ -583,13 +617,13 @@
                                         <div class="programs__group-descr">
                                             <h3 class="programs__item-head">Не Рим, не Троя</h3>
                                             <p class="programs__item-info">По вторникам в 12:00</p>
-                                            <a class="programs__item-link" href="#">Подробнее 
-                                                <svg class="programs__item-svg" width="21" height="8" viewBox="0 0 21 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M20.3536 4.35355C20.5488 4.15829 20.5488 3.84171 20.3536 3.64645L17.1716 0.464466C16.9763 0.269204 16.6597 0.269204 16.4645 0.464466C16.2692 0.659728 16.2692 0.976311 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53553C16.6597 7.7308 16.9763 7.7308 17.1716 7.53553L20.3536 4.35355ZM0 4.5H20V3.5H0V4.5Z" fill="#121723"/>
-                                                </svg>
-                                            </a>
                                         </div> 
                                     </div>
+                                    <a class="programs__item-link" href="#">Подробнее 
+                                        <svg class="programs__item-svg" width="21" height="8" viewBox="0 0 21 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20.3536 4.35355C20.5488 4.15829 20.5488 3.84171 20.3536 3.64645L17.1716 0.464466C16.9763 0.269204 16.6597 0.269204 16.4645 0.464466C16.2692 0.659728 16.2692 0.976311 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53553C16.6597 7.7308 16.9763 7.7308 17.1716 7.53553L20.3536 4.35355ZM0 4.5H20V3.5H0V4.5Z" fill="#121723"/>
+                                        </svg>
+                                    </a>
                                 </li>
                                 <li class="programs__item">
                                     <div class="programs__item-card">
@@ -597,13 +631,13 @@
                                         <div class="programs__group-descr">
                                             <h3 class="programs__item-head">Эрудит</h3>
                                             <p class="programs__item-info">По пятницам в 17:00</p>
-                                            <a class="programs__item-link" href="#">Подробнее 
-                                                <svg class="programs__item-svg" width="21" height="8" viewBox="0 0 21 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M20.3536 4.35355C20.5488 4.15829 20.5488 3.84171 20.3536 3.64645L17.1716 0.464466C16.9763 0.269204 16.6597 0.269204 16.4645 0.464466C16.2692 0.659728 16.2692 0.976311 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53553C16.6597 7.7308 16.9763 7.7308 17.1716 7.53553L20.3536 4.35355ZM0 4.5H20V3.5H0V4.5Z" fill="#121723"/>
-                                                </svg>
-                                            </a>
                                         </div> 
                                     </div>
+                                    <a class="programs__item-link" href="#">Подробнее 
+                                        <svg class="programs__item-svg" width="21" height="8" viewBox="0 0 21 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20.3536 4.35355C20.5488 4.15829 20.5488 3.84171 20.3536 3.64645L17.1716 0.464466C16.9763 0.269204 16.6597 0.269204 16.4645 0.464466C16.2692 0.659728 16.2692 0.976311 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53553C16.6597 7.7308 16.9763 7.7308 17.1716 7.53553L20.3536 4.35355ZM0 4.5H20V3.5H0V4.5Z" fill="#121723"/>
+                                        </svg>
+                                    </a>
                                 </li>
                                 <li class="programs__item">
                                     <div class="programs__item-card">
@@ -611,13 +645,13 @@
                                         <div class="programs__group-descr">
                                             <h3 class="programs__item-head">Тонкости эпох</h3>
                                         <p class="programs__item-info">По субботам в 10:00</p>
-                                        <a class="programs__item-link" href="#">Подробнее 
-                                            <svg class="programs__item-svg" width="21" height="8" viewBox="0 0 21 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M20.3536 4.35355C20.5488 4.15829 20.5488 3.84171 20.3536 3.64645L17.1716 0.464466C16.9763 0.269204 16.6597 0.269204 16.4645 0.464466C16.2692 0.659728 16.2692 0.976311 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53553C16.6597 7.7308 16.9763 7.7308 17.1716 7.53553L20.3536 4.35355ZM0 4.5H20V3.5H0V4.5Z" fill="#121723"/>
-                                            </svg>
-                                        </a>
                                         </div> 
                                     </div>
+                                    <a class="programs__item-link" href="#">Подробнее 
+                                        <svg class="programs__item-svg" width="21" height="8" viewBox="0 0 21 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20.3536 4.35355C20.5488 4.15829 20.5488 3.84171 20.3536 3.64645L17.1716 0.464466C16.9763 0.269204 16.6597 0.269204 16.4645 0.464466C16.2692 0.659728 16.2692 0.976311 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53553C16.6597 7.7308 16.9763 7.7308 17.1716 7.53553L20.3536 4.35355ZM0 4.5H20V3.5H0V4.5Z" fill="#121723"/>
+                                        </svg>
+                                    </a>
                                 </li>
                                 <li class="programs__item">
                                     <div class="programs__item-card">
@@ -625,13 +659,13 @@
                                         <div class="programs__group-descr">
                                             <h3 class="programs__item-head">Живые мысли</h3>
                                         <p class="programs__item-info">По воскресеньям в 15:30</p>
-                                        <a class="programs__item-link" href="#">Подробнее 
-                                            <svg class="programs__item-svg" width="21" height="8" viewBox="0 0 21 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M20.3536 4.35355C20.5488 4.15829 20.5488 3.84171 20.3536 3.64645L17.1716 0.464466C16.9763 0.269204 16.6597 0.269204 16.4645 0.464466C16.2692 0.659728 16.2692 0.976311 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53553C16.6597 7.7308 16.9763 7.7308 17.1716 7.53553L20.3536 4.35355ZM0 4.5H20V3.5H0V4.5Z" fill="#121723"/>
-                                            </svg>
-                                        </a>
                                         </div>
                                     </div>
+                                    <a class="programs__item-link" href="#">Подробнее 
+                                        <svg class="programs__item-svg" width="21" height="8" viewBox="0 0 21 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20.3536 4.35355C20.5488 4.15829 20.5488 3.84171 20.3536 3.64645L17.1716 0.464466C16.9763 0.269204 16.6597 0.269204 16.4645 0.464466C16.2692 0.659728 16.2692 0.976311 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53553C16.6597 7.7308 16.9763 7.7308 17.1716 7.53553L20.3536 4.35355ZM0 4.5H20V3.5H0V4.5Z" fill="#121723"/>
+                                        </svg>
+                                    </a>
                                 </li>
                               </ul>
                             </div>
@@ -1077,6 +1111,10 @@
                         <li class="playlist__card-item playlist__hover">
                             <span class="playlist__label-country playlist__label-rus"></span>
                             <img class="playlist__img testHover" src="img/1-1.png" alt="Изображение исполнителя">
+                            <svg class="playlist__svg-hover" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="24" cy="24" r="21" fill="#6D31EE"/>
+                                <path d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="white"/>
+                            </svg>      
                             <div class="playlist__card-description">
                                 <h4 class="playlist__card-head">Ploho</h4>
                                 <span class="playlist__card-text">3 последних альбома</span>
@@ -1085,6 +1123,10 @@
                         <li class="playlist__card-item">
                             <span class="playlist__label-country playlist__label-rus"></span>
                             <img class="playlist__img" src="img/1-2.png" alt="Изображение исполнителя">
+                            <svg class="playlist__svg-hover" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="24" cy="24" r="21" fill="#6D31EE"/>
+                                <path d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="white"/>
+                            </svg>                                
                             <div class="playlist__card-description">
                                 <h4 class="playlist__card-head">Molchat Doma</h4>
                                 <span class="playlist__card-text">Все песни</span>
@@ -1093,6 +1135,10 @@
                         <li class="playlist__card-item">
                             <span class="playlist__label-country playlist__label-rus"></span>
                             <img class="playlist__img" src="img/1-3.png" alt="Изображение исполнителя">
+                            <svg class="playlist__svg-hover" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="24" cy="24" r="21" fill="#6D31EE"/>
+                                <path d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="white"/>
+                            </svg>      
                             <div class="playlist__card-description">
                                 <h4 class="playlist__card-head">Motorama</h4>
                                 <span class="playlist__card-text">Все синглы</span>
@@ -1101,6 +1147,10 @@
                         <li class="playlist__card-item">
                             <span class="playlist__label-country playlist__label-rus"></span>
                             <img class="playlist__img" src="img/1-4.png" alt="Изображение исполнителя">
+                             <svg class="playlist__svg-hover" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="24" cy="24" r="21" fill="#6D31EE"/>
+                                <path d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="white"/>
+                            </svg>      
                             <div class="playlist__card-description">
                                 <h4 class="playlist__card-head">Human Tetris</h4>
                                 <span class="playlist__card-text">3 последних альбома</span>
@@ -1109,6 +1159,10 @@
                         <li class="playlist__card-item">
                             <span class="playlist__label-country playlist__label-rus"></span>
                             <img class="playlist__img" src="img/1-5.png" alt="Изображение исполнителя">
+                             <svg class="playlist__svg-hover" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="24" cy="24" r="21" fill="#6D31EE"/>
+                                <path d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="white"/>
+                            </svg>      
                             <div class="playlist__card-description">
                                 <h4 class="playlist__card-head">Буерак</h4>
                                 <span class="playlist__card-text">Все EP</span>
@@ -1119,6 +1173,10 @@
                         <li class="playlist__card-item">
                             <span class="playlist__label-country playlist__label-rus"></span>
                             <img class="playlist__img" src="img/1-6.png" alt="Изображение исполнителя">
+                             <svg class="playlist__svg-hover" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="24" cy="24" r="21" fill="#6D31EE"/>
+                                <path d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="white"/>
+                            </svg>      
                             <div class="playlist__card-description">
                                 <h4 class="playlist__card-head">Июльские Дни</h4>
                                 <span class="playlist__card-text">Альбом «Колокол»</span>
@@ -1129,6 +1187,10 @@
                         <li class="playlist__card-item">
                             <span class="playlist__label-country playlist__label-brit"></span>
                             <img class="playlist__img" src="img/1-7.png" alt="Изображение исполнителя">
+                             <svg class="playlist__svg-hover" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="24" cy="24" r="21" fill="#6D31EE"/>
+                                <path d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="white"/>
+                            </svg>      
                             <div class="playlist__card-description">
                                 <h4 class="playlist__card-head">Joy Division</h4>
                                 <span class="playlist__card-text">Лучшее за всё время</span>
@@ -1139,6 +1201,10 @@
                         <li class="playlist__card-item">
                             <span class="playlist__label-country playlist__label-brit"></span>
                             <img class="playlist__img" src="img/1-8.png" alt="Изображение исполнителя">
+                             <svg class="playlist__svg-hover" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="24" cy="24" r="21" fill="#6D31EE"/>
+                                <path d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="white"/>
+                            </svg>      
                             <div class="playlist__card-description">
                                 <h4 class="playlist__card-head">The Cure</h4>
                                 <span class="playlist__card-text">Лучшее за всё время</span>
@@ -1149,6 +1215,10 @@
                         <li class="playlist__card-item">
                             <span class="playlist__label-country playlist__label-brit"></span>
                             <img class="playlist__img" src="img/1-9.png" alt="Изображение исполнителя">
+                             <svg class="playlist__svg-hover" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="24" cy="24" r="21" fill="#6D31EE"/>
+                                <path d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="white"/>
+                            </svg>      
                             <div class="playlist__card-description">
                                 <h4 class="playlist__card-head">The Smiths</h4>
                                 <span class="playlist__card-text">Период 1984–1988</span>
@@ -1159,6 +1229,10 @@
                         <li class="playlist__card-item">
                             <span class="playlist__label-country playlist__label-brit"></span>
                             <img class="playlist__img" src="img/1-10.png" alt="Изображение исполнителя">
+                             <svg class="playlist__svg-hover" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="24" cy="24" r="21" fill="#6D31EE"/>
+                                <path d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="white"/>
+                            </svg>      
                             <div class="playlist__card-description">
                                 <h4 class="playlist__card-head">New Order</h4>
                                 <span class="playlist__card-text">Хиты</span>
@@ -1167,6 +1241,10 @@
                         <li class="playlist__card-item">
                             <span class="playlist__label-country playlist__label-brit"></span>
                             <img class="playlist__img" src="img/1-11.png" alt="Изображение исполнителя">
+                             <svg class="playlist__svg-hover" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="24" cy="24" r="21" fill="#6D31EE"/>
+                                <path d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="white"/>
+                            </svg>      
                             <div class="playlist__card-description">
                                 <h4 class="playlist__card-head">Bauhaus</h4>
                                 <span class="playlist__card-text">Все синглы</span>
@@ -1175,6 +1253,10 @@
                         <li class="playlist__card-item">
                             <span class="playlist__label-country playlist__label-brit"></span>
                             <img class="playlist__img" src="img/1-12.png" alt="Изображение исполнителя">
+                             <svg class="playlist__svg-hover" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="24" cy="24" r="21" fill="#6D31EE"/>
+                                <path d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="white"/>
+                            </svg>      
                             <div class="playlist__card-description">
                                 <h4 class="playlist__card-head">Gang Of Four</h4>
                                 <span class="playlist__card-text">3 последних альбома</span>
@@ -1413,7 +1495,8 @@
             <span class="footer__brand">W-WAVE ® 2021</span>
         </div>
     </footer>
-    <script defer src="js/custom-select.js"></script>
-    <script defer type="module" src="js/main.js"></script>
+    <script defer type="module" src="./js/main.js"></script>
+    <script defer src="./js/custom-select.js"></script>
+  
 </body>
 </html>
