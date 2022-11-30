@@ -135,12 +135,12 @@ function showText(textEl) {
 
 //Burger menu
 
-let headButton = document.getElementById('button')
-headButton.addEventListener('click', function(){
-  headButton.classList.toggle('nav__btn_active');
-  document.querySelector('.header__nav').classList.toggle('header__nav-active');
-  document.querySelector('.bar__nav').classList.toggle('bar__nav-active');
-})
+// let headButton = document.getElementById('button')
+// headButton.addEventListener('click', function(){
+//   headButton.classList.toggle('nav__btn_active');
+//   document.querySelector('.header__nav').classList.toggle('header__nav-active');
+//   document.querySelector('.bar__nav').classList.toggle('bar__nav-active');
+// })
 
 //Open list at 320px
 
@@ -163,7 +163,7 @@ butttonPodcast.addEventListener('click',function(){
   document.querySelectorAll('.podcasts__item').forEach(function(workСontainer){
     workСontainer.classList.toggle('podcasts__item_active')
 });
-})
+});
 
 //Validation form popup
 let form = document.querySelector('.header__form')
@@ -188,5 +188,20 @@ form.addEventListener('submit', function(event){
     errorPas.innerHTML = 'Введите пароль'
     password.parentElement.insertBefore(errorPas,password)
   }
-})
+});
 
+let closeBtn = document.querySelector('.menu__btn');
+let headButton = document.getElementById('button')
+closeBtn.addEventListener('click', function(){
+  closeBtn.classList.toggle('open__burger');
+  document.querySelector('.header__nav').classList.toggle('header__nav-active');
+  document.querySelector('.bar__nav').classList.toggle('bar__nav-active');
+});
+
+window.addEventListener('scroll', () => {
+if (window.scrollY >= 30) {
+  closeBtn.classList.add('done');
+} else {
+  closeBtn.classList.remove('done');
+}
+});
