@@ -67,6 +67,9 @@ html {
 button, input {
     overflow: visible;
 }
+.over{
+    overflow: hidden;
+}
 .container{
     max-width: 1110px;
     margin: 0 auto;
@@ -105,7 +108,7 @@ button, input {
     width: 78.3%;
     min-width: 765px;
     padding-top: 20px;
-    padding-bottom: 19px;
+    padding-bottom: 20px;
 }
 .header__container{
     display: flex;
@@ -117,7 +120,8 @@ button, input {
     display: none;
 }
 .header__nav {
-    width: 80%;
+    margin-right: auto;
+    width: 73%;
 }
 .header__nav__btn{
     display: none;
@@ -483,7 +487,7 @@ button, input {
     justify-content: center;
 }
 .podcasts__btn-else{
-    margin-bottom: 91px;
+    margin-bottom: 95px;
     width: 232px;
     height: 65px;
     border-radius: 40px;
@@ -496,10 +500,10 @@ button, input {
 
 /* Programs */
 .programs__container{
-    min-height: 752.8px;
+    min-height: fit-content;
 }
 .programs__group{
-    margin-bottom: 90px;
+    margin-bottom: 79px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -546,7 +550,7 @@ button, input {
    
 }
 .programs__button{
-    margin-bottom: 11px;
+    margin-bottom: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -577,9 +581,9 @@ button, input {
 }
 .programs__arhive {
     position: absolute;
-    bottom: 3px;
+    bottom: 15px;
     max-width: 255px;
-    padding-top: 235px;
+    padding-top: 236px;
     background-image: url('../img/mic.png');
     background-position: left;
     background-repeat: no-repeat;
@@ -598,14 +602,14 @@ button, input {
 }
 .programs__item:nth-child(1){
     margin-right: 27px;
-    margin-bottom: 28px;
+    margin-bottom: 20px;
 }
 .programs__item:nth-child(2){
-    margin-bottom: 28px;
+    margin-bottom: 20px;
     margin-right: 27px;
 }
 .programs__item:nth-child(3){
-    margin-bottom: 28px;
+    margin-bottom: 20px;
 }
 .programs__item:nth-child(4){
     margin-right: 27px;
@@ -775,7 +779,8 @@ button, input {
 }
 
 .quests {
-    height: 1108px;
+    height: fit-content;
+    padding-bottom: 91px;
     background-color: #121723;
 }
 
@@ -979,7 +984,6 @@ button, input {
     
 }
 .playlist__card-description {
-    height: 100%;
     padding: 14px 5px 12px 15px;
     border-left: 1px solid #E6E8EC;
     border-right: 1px solid #E6E8EC;

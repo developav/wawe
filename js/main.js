@@ -147,13 +147,15 @@ function showText(textEl) {
 let etherButton = document.querySelector('.ether__btn');
 let barIcon = document.querySelector('.bar__icon');
 let openButton = document.querySelector('.ether__btn-open');
-let closeButton = document.querySelector('.ether__btn-close')
+let closeButton = document.querySelector('.ether__btn-close');
+let hero = document.querySelector('.hero');
 
 etherButton.addEventListener('click', function(){
   barIcon.classList.toggle('bar__icon-active');
   document.querySelector('.header__bottom').classList.toggle('bar__active')
   openButton.classList.toggle('close');
   closeButton.classList.toggle('open');
+  hero.classList.toggle('hero__down');
 });
 
 //Btn open podcasts
@@ -196,10 +198,11 @@ closeBtn.addEventListener('click', function(){
   closeBtn.classList.toggle('open__burger');
   document.querySelector('.header__nav').classList.toggle('header__nav-active');
   document.querySelector('.bar__nav').classList.toggle('bar__nav-active');
+  document.body.classList.toggle('over');
 });
 
 window.addEventListener('scroll', () => {
-if (window.scrollY >= 30) {
+if (window.scrollY >= 20) {
   closeBtn.classList.add('done');
 } else {
   closeBtn.classList.remove('done');
