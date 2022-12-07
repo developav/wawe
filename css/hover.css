@@ -96,7 +96,7 @@
     border-color: #4F28A5;
 }
 .podcasts__icon:hover circle{
-    transition: all 0.3s linear;
+    transition:  stroke 0.3s linear, fill 0.3s linear;
 }
 .podcasts__icon:hover path{
     cursor: pointer;
@@ -200,7 +200,7 @@
     background: #6D31EE;
 }
 .programs__item-img{
-    transition: all 0.3s linear;
+    transition: opacity 0.3s linear;
 }
 .programs__item-card:active .programs__item-img{
     cursor: pointer;
@@ -297,6 +297,15 @@
     fill: #AA9DFA;
 }
 .footer__card-icon:active svg path{
+    fill: #4F28A5;
+}
+.quests__card-icon:hover svg path{
+    fill: #6D31EE;
+}
+.quests__card-icon:focus svg path{
+    fill: #AA9DFA;
+}
+.quests__card-icon:active svg path{
     fill: #4F28A5;
 }
 .quests__card-btn:hover{

@@ -54,6 +54,8 @@ body{
 a{
     color: inherit;
     text-decoration: none;
+    outline: none;
+    border: none;
 }
 li{
     list-style-type: none;
@@ -257,7 +259,7 @@ button, input {
     border-left: 1px solid #E6E8EC;
     border-right: 1px solid #E6E8EC;
     outline: none;
-    transition: all .4s ease-in-out;
+   
 }
 .bar__icon__link-eather::after{
     position: absolute;
@@ -289,7 +291,7 @@ button, input {
     top: 10px;
     left: 11px;
     fill: #A1A6B4;
-    transition: all 0.3s linear;
+    transition: fill 0.3s linear;
 }
 .bar__icon-group{
     display: flex;
@@ -435,7 +437,7 @@ button, input {
     justify-content: space-between;
 }
 .podcasts__info-group{
-    padding: 20px 10px 9px 30px;
+    padding: 23px 10px 9px 30px;
 }
 .podcasts__time{
     padding: 10px 10px 10px 1px;
@@ -448,6 +450,7 @@ button, input {
 .podcasts__singer{
     margin: 0;
     padding: 1px 10px 10px 1px;
+    letter-spacing: -0.2px;
     font-size: 16px;
     color: #A1A6B4;
 }
@@ -463,11 +466,11 @@ button, input {
 }
 .podcasts__icon circle{
     stroke: #A1A6B4;
-    transition: all 0.3s linear;
+    transition: stroke 0.3s linear,fill 0.3s linear;
 }
 .podcasts__icon path{
     stroke: #A1A6B4;
-    transition: all 0.3s linear;
+    transition: stroke 0.3s linear,fill 0.3s linear;
 }
 .podcasts__description{
     padding: 9px 1px 4px 48px;
@@ -640,7 +643,10 @@ button, input {
     color: #121723;
 }
 .programs__item-svg{
-    transition: all 0.3s linear;
+    transition:0.3s linear;
+}
+.programs__item-link{
+    transition: color .3s linear;
 }
 
 /* Quests */
@@ -697,6 +703,8 @@ button, input {
 }
 .quests__group-link:hover{
     color: #AA9DFA;
+}.quests__group-link:focus{
+    color: #AA9DFA;
 }
 
 #accordion {
@@ -727,7 +735,7 @@ button, input {
       height: 0;
       overflow: hidden;
       color: #333;
-      transition: height 1s;
+      transition: height 1s linear;
   }
 .quests__tabs-text {
       font: 12px Arial;
@@ -739,14 +747,9 @@ button, input {
     justify-content: space-between;
     align-items: center;
 }
-
-.quests__selected-list {
-    transition: all 0.3s ease-out;
-}
 .select__list svg {
-    transition: all 0.5s ease-out; 
     transform: rotate(180deg);
-    transition: all 0.5s ease-out;
+    transition: transform 0.5s ease-out;
 }
 #accordion > h3.select__list{
     border-top: 1px solid #AA9DFA;
@@ -791,6 +794,13 @@ button, input {
 }
 .quests__card-item{
     padding-top: 11px;
+}
+
+.quests__card-icon svg{
+    transition: fill .3s linear;
+}
+.quests__card-icon path{
+    transition: fill .3s linear;
 }
 
 .quests__card-two{
@@ -903,7 +913,7 @@ button, input {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 50% 50%;
-    transition: all 0.3s linear;
+    transition: border 0.3s linear;
   }
   /* стили при наведении курсора на радио */
   .custom-radio:not(:disabled):not(:checked)+label:hover::before {
@@ -1001,7 +1011,6 @@ button, input {
 }
 .playlist__img{
     width: 100%;
-    transition: all 0.3s linear;
 }
 .playlist__svg-hover{
     bottom: 10px;
@@ -1010,7 +1019,7 @@ button, input {
     position: absolute;
     z-index: 222;
     opacity: 0;
-    transition: all 0.3s linear;
+    transition: opacity 0.3s linear;
 }
 .playlist__card-text{
     font-size: 12px;
@@ -1119,10 +1128,13 @@ button, input {
     background-color: transparent;
     font-size: 20px;
     color: #F0D288;
-    transition: all 0.3s linear;
+    transition: border 0.3s linear,color 0.3s linear,background-color 0.3s linear;
 }
 .shop__button svg{
-    transition: all 0.3s linear;
+    transition: fill 0.3s linear;
+}
+.shop__button path{
+    transition: fill 0.3s linear;
 }
 
     /* ABOUT */
@@ -1220,7 +1232,7 @@ button, input {
     line-height: 20px;
     font-weight: 400;
     color: #A1A6B4;
-    transition: all 0.3s linear;
+    transition: background-color 0.3s linear, border 0.3s linear, color 0.3s linear;
 }
 .about__form-input{
     margin-bottom: 32px;
@@ -1235,7 +1247,21 @@ button, input {
     line-height: 20px;
     font-weight: 400;
     color: #A1A6B4;
-    transition: all 0.3s linear;
+    transition: background-color 0.3s linear, border 0.3s linear, color 0.3s linear;
+}
+.about__form textarea {
+    margin-bottom: 25px;
+    padding: 29px 20px 19px 31px;
+    width: 78.2%;
+    height: 98px;
+    border-radius: 30px;
+    border: 1px solid #FFFFFF;
+    background-color: transparent;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #A1A6B4;
+    transition: background-color 0.3s linear, border 0.3s linear, color 0.3s linear;
 }
 .about-form__input:nth-child(2) {
     margin-right: 27px;
@@ -1349,7 +1375,7 @@ button, input {
     padding: 2px;
     outline: none;
     color: #FFFFFF;
-    transition: all .4s ease-in-out;
+    transition: color .4s ease-in-out;
 }
 .list-reset {
     margin: 0;

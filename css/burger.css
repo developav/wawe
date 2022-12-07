@@ -83,7 +83,7 @@ li{
         position: fixed;
         visibility: hidden;
         top: 0;
-        left: -100%;
+        left: -200%;
         height: 44vh;
         margin: 0;
         padding: 92px 90px 0px 90px;

@@ -35,6 +35,7 @@ table {
     cursor: pointer;
     border: none;
     border-radius: 10px;
+    transition: background .3s linear;
 }
 .custom-options {
     position: absolute;

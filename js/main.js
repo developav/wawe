@@ -20,6 +20,12 @@ validation
       errorMessage: 'Введите корректный Email',
     },
   ])
+  .addField('#about__texarea', [
+    {
+      rule: 'required',
+      value: 3,
+    },
+  ])
 
 
 const swiper = new Swiper('.swiper', {
@@ -30,6 +36,7 @@ const swiper = new Swiper('.swiper', {
     spaceBetween: 100,
     slidesPerView: 4,
     spaceBetween: 30,
+    variableWidth : true,
   
     // If we need pagination
     pagination: {
@@ -47,6 +54,10 @@ const swiper = new Swiper('.swiper', {
       el: '.swiper-scrollbar',
     },
     breakpoints: {
+      120: {
+        slidesPerView: 1,
+        spaceBetween: 200
+      },
       320: {
         slidesPerView: 2,
         spaceBetween: 5
