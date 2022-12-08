@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 blockquote, q {
     quotes: none;
 }
@@ -12,19 +19,33 @@ table {
 
 .select-wrapper {
     position: relative;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
     width: 97%;
 }
 .select {
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 .select__trigger {
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding: 0 7px 0px 12px;
     font-size: 16px;
     font-weight: 400;
@@ -35,6 +56,8 @@ table {
     cursor: pointer;
     border: none;
     border-radius: 10px;
+    -webkit-transition: background .3s linear;
+    -o-transition: background .3s linear;
     transition: background .3s linear;
 }
 .custom-options {
@@ -47,6 +70,8 @@ table {
     border-radius: 10px;
     border-top: 0;
     background: #fff;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
     transition: all 0.5s;
     opacity: 0;
     visibility: hidden;
@@ -67,6 +92,8 @@ table {
     color: #A1A6B4;
     line-height: 16px;
     cursor: pointer;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
     transition: all 0.5s;
 }
 .custom-option:nth-child(1){
@@ -97,23 +124,33 @@ table {
     bottom: 0px;
     width: 0.10rem;
     height: 100%;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
     transition: all 0.5s;
 }
 .arrow::before {
     left: -2px;
-    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
     background-color: #394a6d;
 }
 .arrow::after {
     left: 5px;
-    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
     background-color: #394a6d;
 }
 .open .arrow::before {
     left: -2px;
-    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
 }
 .open .arrow::after {
     left: 5px;
-    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
 }

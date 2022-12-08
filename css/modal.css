@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .disable-scroll{
     position: relative;
     overflow: hidden;
@@ -21,6 +28,8 @@
     vertical-align: top;
     opacity: 0;
     visibility: hidden;
+    -webkit-transition: opacity var(--transition-time),visibility var(--transition-time);
+    -o-transition: opacity var(--transition-time),visibility var(--transition-time);
     transition: opacity var(--transition-time),visibility var(--transition-time);
 }
 .header__pop-modal::before {
@@ -70,12 +79,19 @@
 }
 .header__modal-reg{
     color: #6D31EE;
+    -webkit-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
     transition: all 0.3s linear;
 }
 .header__form{
     margin-bottom: 31px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     padding-bottom: 29px;
     border-bottom: 1px solid rgba(230, 232, 236, 0.4);
 }
@@ -96,6 +112,8 @@
     line-height: 20px;
     font-weight: 400;
     color: #A1A6B4;
+    -webkit-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
     transition: all 0.3s linear;
 }
 .error{
@@ -118,6 +136,8 @@
     border: none;
     color: #FFFFFF;
     font-size: 20px;
+    -webkit-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
     transition: all 0.3s linear;
 }
 .show_popup{
@@ -127,11 +147,15 @@
     opacity: 1;
 }
 .fade, .fade.animate-open {
+    -webkit-transition: opacity 0.3s;
+    -o-transition: opacity 0.3s;
     transition: opacity 0.3s;
 }
 .is-open {
     opacity: 1;
     visibility: visible;
+    -webkit-transition: opacity 0.5s,visibility 1s;
+    -o-transition: opacity 0.5s,visibility 1s;
     transition: opacity 0.5s,visibility 1s;
 }
 .header__modal-bottom{
@@ -146,7 +170,14 @@
 }
 .header__social {
     padding: 32px 6px 7px 3px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
