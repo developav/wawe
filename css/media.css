@@ -302,7 +302,7 @@
         -webkit-transition: max-height 0.3s ease-out;
         -o-transition: max-height 0.3s ease-out;
         transition: max-height 0.3s ease-out;
-        width: 550px;
+        width: 552px;
     }
     #accordion {
         width: 539px;
@@ -774,7 +774,7 @@
         width: 100%;
     }
     .podcasts {
-        height: 1725px;
+        height: fit-content;
         background-color: #F2F2F2;
     }
     /* PROGRAMS */
@@ -867,7 +867,7 @@
         padding: 17px 8px 26px 0px;
     }
     .quests {
-        height: 1790px;
+        height: fit-content;
         background-color: #121723;
     }
     .panel__tabs:not(:nth-child(13n)) {
@@ -879,7 +879,7 @@
         /* margin: 0px; */
     }
     .panel {
-        max-height: 213px;
+        max-height: 500px;
     }
     .quests__column {
         display: -webkit-box;
@@ -1150,6 +1150,34 @@
     .about__form textarea {
         width: 88.6%;
         margin-right: 0;
+    }
+    .panel__tabs:not(:nth-child(2n + 2)) {
+        margin-right: 15px;
+    }
+    
+    .panel{ 
+        padding-top: 27px;
+        padding-bottom: 23px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+        color: #212121;
+        background-color: #121723;
+        max-height: 500px;
+        overflow: hidden;
+        -webkit-transition: max-height 0.3s ease-out;
+        -o-transition: max-height 0.3s ease-out;
+        transition: max-height 0.3s ease-out;
+        width: 100%;
     }
 
     /* FOOTER */
@@ -2359,9 +2387,9 @@
     }
     .podcasts__item_active.podcasts__item:nth-child(n+5) {
         display: block;
-        -webkit-transition: all .4s linear;
-        -o-transition: all .4s linear;
-        transition: all .4s linear;
+        -webkit-transition: display .4s linear;
+        -o-transition: display .4s linear;
+        transition: display .4s linear;
     }
     .podcasts__item:nth-child(n+5) {
         display: none;
@@ -2681,6 +2709,9 @@
     }
     .panel__tabs:not(:nth-child(13n)) {
         margin-bottom: 0px;
+    }
+    .panel__tabs:not(:nth-child(3n)) {
+        margin-right: 0px;
     }
     .panel__tabs:not(:nth-child(15n)) {
         margin-bottom: 24px;
