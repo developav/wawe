@@ -412,7 +412,7 @@
         max-width: 100%;
         padding: 38px 47px 38px 0px;
         border-top: 1px solid #D2D5DD;
-        background-image: url(../img/18+.png);
+        background-image: url('../img/18+.png');
         background-repeat: no-repeat;
         background-position: bottom left;
     }
@@ -472,7 +472,7 @@
         right: 100px;
         width: 25%;
         height: 300px;
-        background-image: url(/img/Dawn.png);
+        background-image: url('../img/Dawn.png');
         background-repeat: no-repeat;
         background-position: right;
     }
@@ -981,7 +981,7 @@
         max-width: 79%;
         padding: 37px 111px 38px 0px;
         border-top: 1px solid #D2D5DD;
-        background-image: url(../img/18+.png);
+        background-image: url('../img/18+.png');
         background-repeat: no-repeat;
         background-position: bottom left;
     }
