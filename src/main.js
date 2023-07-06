@@ -1,5 +1,5 @@
 
-import JustValidate from '../node_modules/just-validate/dist/just-validate.es.js'
+// import JustValidate from '../node_modules/just-validate/dist/just-validate.es.js'
 
 
 const validation = new JustValidate('#formAbout', {
