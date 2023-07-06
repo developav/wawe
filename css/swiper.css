@@ -73,7 +73,7 @@
 .swiper-slide {
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  width: 100%;
+  width: 25%;
   height: 100%;
   position: relative;
   -webkit-transition-property: -webkit-transform;
