@@ -1,7 +1,4 @@
 
-// import JustValidate from '../node_modules/just-validate/dist/just-validate.es.js'
-
-
 const validation = new JustValidate('#formAbout', {
     errorFieldCssClass: 'is-invalid', 
 });
@@ -171,11 +168,10 @@ etherButton.addEventListener('click', function(){
 
 //Btn open podcasts
 let butttonPodcast = document.querySelector('.podcasts__btn-else');
-let listItem = document.querySelector('.podcasts__item');
+
 butttonPodcast.addEventListener('click',function(){
-  document.querySelectorAll('.podcasts__item').forEach(function(workСontainer){
-    workСontainer.classList.toggle('podcasts__item_active')
-});
+  const listItem = document.querySelectorAll('.podcasts__item-hidden');
+ listItem.forEach(x => x.classList.toggle('podcasts__item_active'));
 });
 
 //Validation form popup

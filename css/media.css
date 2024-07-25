@@ -786,6 +786,12 @@
         height: fit-content;
         background-color: #F2F2F2;
     }
+    .podcasts__item-hidden {
+        display: none;
+    }
+    .podcasts__item_active {
+        display: flex;
+    }
     /* PROGRAMS */
     .programs{
         min-height: 1322px;
@@ -1616,8 +1622,11 @@
         background-color: #E6E8EC;
         font-size: 10px;
     }
-    .podcasts__item:nth-child(n+5) {
+    .podcasts__item-hidden {
         display: none;
+    }
+    .podcasts__item_active {
+        display: flex;
     }
     .podcasts__btn {
         width: 100%;
