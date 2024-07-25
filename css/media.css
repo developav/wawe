@@ -5,6 +5,13 @@
 * Browsers: last 4 version
 */
 
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @media(max-width:1200px){
     .container {
         max-width: 824px;
@@ -774,6 +781,8 @@
         width: 100%;
     }
     .podcasts {
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
         height: fit-content;
         background-color: #F2F2F2;
     }
@@ -867,6 +876,8 @@
         padding: 17px 8px 26px 0px;
     }
     .quests {
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
         height: fit-content;
         background-color: #121723;
     }
