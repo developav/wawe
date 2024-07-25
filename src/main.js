@@ -10,19 +10,18 @@ validation
       errorMessage: 'Введите логин',
     },
   ])
-  .addField('#email', [
+  .addField('#emailAbout', [
     {
       rule: 'required',
-      rule: 'email',
       errorMessage: 'Введите корректный Email',
     },
   ])
-  .addField('#about__texarea', [
+  .addField('#checkbox', [
     {
       rule: 'required',
-      value: 3,
+      errorMessage: 'Ознакосьтесь',
     },
-  ])
+  ]);
 
 
 const swiper = new Swiper('.swiper', {

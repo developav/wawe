@@ -252,6 +252,9 @@
     color: #121723;
     background: #E6E8EC;
 }
+.programs__button >svg > path{
+    transition: stroke 0.3s linear;
+}
 .programs__button:hover {
     background-color: #121723;
     color: #FFFFFF;
@@ -265,10 +268,10 @@
     color: #FFFFFF;
 }
 
-.programs__button:hover .programs__btn-svg path{
+.programs__button:hover >svg > path{
     stroke: #FFFFFF;
 }
-.programs__button:active .programs__btn-svg path{
+.programs__button:active >svg > path{
     stroke: #121723;
 }
 #accordion > h3:hover{
